@@ -1,0 +1,4878 @@
+@charset "utf-8";
+
+@import url(http://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+
+@font-face{
+    font-family:"nbg";
+    src:url(fonts/NanumBarunGothic.woff);
+}
+
+body,div,p,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6
+table,tr,th,td,form,fieldset,legend,input,label,textarea,select,button,header,footer,nav,aside,section,article,main,a,span,strong,em,b,i,address{
+    margin: 0; padding: 0; box-sizing: border-box;
+}
+html{font-size:0.625em;}
+body,h1,h2,h3,h4,h5,h6,button{font-family:'Spoqa Han Sans',"돋움","dotum",sans-serif; line-height: 1;}
+ul,li,ol{list-style: none;}
+table{border-collapse: collapse;}
+em,strong,b,i,address{font-style: normal; font-weight: normal;}
+button{border:none; background:transparent; cursor: pointer;}
+a{text-decoration: none;}
+img,fieldset{vertical-align: middle; border:none;}
+
+
+/* common css */
+.hide{display: none;}
+.blind{position: absolute; left:-9999px;}
+.clear:after{content:''; display: block; clear:both;}
+
+
+.pc{display: none;}
+.labtop{display: none;}
+.mobile{}
+
+
+
+/* style css */
+
+header{
+    position: fixed;
+    left:0;
+    top:0;
+    z-index:100;
+    width: 100%;
+    height:75px;
+    background-color:#fff;
+}
+
+.logo{
+    position: absolute;
+    left:50%;
+    top:21px;
+    transform: translateX(-50%);
+    width:91px;
+}
+
+.logo img{
+    width: 100%;
+}
+
+.sch_form{
+    display: none;
+    position: absolute;
+    left:0;
+    top:0;
+    background-color:#fff;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    text-align: center;
+}
+
+.sch_form .btn_sch_off{
+    font-size:1.7rem;
+    color:#959595;
+}
+
+.sch_form input{
+    width:66.666%;
+    height:32px;
+    line-height: 32px;
+    border:none;
+    border-radius: 3px;
+    background-color:#eee;
+    padding-left: 10px;
+    margin:22px 2.133% 2.167%;
+    font-size:1.6rem;
+    color:#000;
+}
+
+.sch_form .btn_sch{
+    width:45px;
+    height:32px;
+    border-radius: 3px;
+    text-indent: -9999px;
+    overflow: hidden;
+    background:url(../img/cjw-icon-search2.png) no-repeat #777 center;
+    background-size:15px;
+}
+
+.btn_sch_on{
+    position: absolute;
+    left:4.667%;
+    top:27px;
+    width: 20px;
+    height: 20px;
+    background:url(../img/cjw-icon-search1.png) no-repeat;
+    background-size: contain;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+.btn_nav{
+    position: absolute;
+    right:4.667%;
+    top:29px;
+    width: 24px;
+    height:18px;
+}
+
+.btn_nav span{
+    display: block;
+    height:4px;
+    background-color:#000;
+    text-indent: -9999px;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.btn_nav span:nth-child(2){
+    margin:3px 0;
+}
+
+
+/* nav 영역 */
+
+#navWrap{
+    display: none;
+    position: fixed;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0,0,0,0.7);
+}
+
+.nav_inner{
+    position: absolute;
+    right:0;
+    top:0;
+    width:67.733%;
+    height:100%;
+    background-color:#fff;
+    padding-top: 31px;
+    overflow: auto;
+}
+
+.nav_inner>div{
+    width:83.071%;
+    margin-left: 7.087%;
+    margin-bottom: 24px;
+}
+
+.nav_inner>div a:nth-child(1){
+    float:left;
+    width:61px;
+    height:22px;
+    background:url(../img/cjw-logo-header.png) no-repeat;
+    background-size:contain;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+
+.nav_inner>div a:nth-child(2){
+    float:right;
+    font-size:1.3rem;
+    color:#02b5d6;
+    line-height: 22px;
+}
+
+.nav_inner .gnb{
+    width:83.071%;
+    margin-left:7.087%;
+    border-top:2px solid #595959;
+}
+
+.nav_inner .gnb>li>a{
+    display: block;
+    position: relative;
+    height:59px;
+    line-height: 58px;
+    border-bottom:1px solid #959595;
+    padding-left: 4.502%;
+    font-size:1.7rem;
+    color:#595959;
+}
+
+.nav_inner .gnb>li:last-child>a{
+    border-bottom: none;
+}
+
+.nav_inner .gnb>li>a span{
+    position: absolute;
+    right:2.844%;
+    top:50%;
+    transform: translateY(-50%);
+    background:url(../img/cjw-arrow-nav-bottom.png) no-repeat;
+    background-size:contain;
+    width:15px;
+    height:8px;
+}
+
+.nav_inner .gnb>li.open>a span{
+    background-image: url(../img/cjw-arrow-nav-top.png);
+}
+
+.nav_inner .sub_wrap{
+    display: none;
+}
+
+.nav_inner .open .sub_wrap{
+    display: block;
+    border-bottom:1px solid #959595;
+}
+
+.nav_inner li:last-child .sub_wrap{
+    border-bottom: none;
+}
+
+.nav_inner .sub_inner{}
+
+.nav_inner .sub_inner_con{}
+
+.nav_inner .left{}
+
+.nav_inner .left ul{
+    background-color:#f8f8f8;
+}
+
+.nav_inner .left ul li{
+    width:89.573%;
+    margin-left: 4.502%;
+}
+
+.nav_inner .left ul li a{
+    display: block;
+    height:45px;
+    line-height: 44px;
+    border-bottom: 1px solid #cfcfcf;
+    padding-left: 5.820%;
+    font-size:1.4rem;
+	color:#747474;
+}
+
+.nav_inner .left ul:last-child li:last-child a{
+    border-bottom: none;
+}
+
+.nav_inner .right{}
+
+.nav_inner>a{
+    display: block;
+    position: relative;
+    height: 58px;
+    line-height: 56px;
+    background-color:#02b5d6;
+    border-bottom:2px solid rgba(255,255,255,.5);
+    padding-left: 7.087%;
+    font-size:1.7rem;
+    color:#fff;
+}
+
+.nav_inner>a:last-child{
+    border-bottom: none;
+}
+
+.nav_inner>a:after{
+    content:'';
+    position: absolute;
+    right:5.314%;
+    top:50%;
+    transform: translateY(-50%);
+    background:url(../img/cjw-icon-login.png) no-repeat;
+    background-size:contain;
+    width: 27px;
+    height: 27px;
+}
+
+.nav_inner>a:last-child:after{
+    background-image:url(../img/cjw-icon-phone.png);
+    right:4.912%;
+}
+
+/* visual */
+
+#visual{
+    margin-top: 75px;  
+}
+
+.img_wrap{
+    text-align: center;
+    height:550px;
+    background:url(../img/cjw-bg-main.jpg) no-repeat center/cover;
+    padding-top: 172px;
+    color:#fff;
+}
+
+.img_wrap>span{
+    font-size:1.8rem;
+}
+
+.img_wrap>span b{
+    color:#81ebff;
+}
+
+.img_wrap>span i{
+    color:#fff857;
+}
+
+.img_wrap h2{
+    font-family: "nbg","돋움",dotum,sans-serif;
+    font-size:4.3rem;
+    font-weight: normal;
+    margin-top: 14px;
+    margin-bottom: 18px;
+}
+
+.img_wrap p{
+    width:82.933%;
+    line-height: 1.286;
+    font-size:1.4rem;
+    margin: 0 auto 29px;
+}
+
+.img_wrap p span{
+    display: block;
+}
+
+.img_wrap a{
+    display: inline-block;
+    width:82.933%;
+    height:50px;
+    line-height: 46px;
+    font-size:1.5rem;
+    color:#fff;
+    border:2px solid rgba(255,255,255,0.6);
+    border-radius: 3px;
+    background-color:rgba(0,0,0,0.4);
+}
+
+.img_wrap .labtop{display: none;}
+
+/* mobile_nav */
+
+nav.section{
+    height:50px;
+    border-bottom:1px solid #959595;
+    background-color:#fff;
+}
+
+nav.section ul{}
+
+nav.section ul li{
+    float:left;
+    width:25%;
+}
+
+nav.section li a{
+    display: block;
+    line-height: 49px;
+    text-align: center;
+    font-size:1.3rem;
+    color:#959595;
+}
+
+nav.section li a:hover,
+nav.section li a:focus{
+    color:#000;
+}
+
+
+/* story */
+
+#mainContents{}
+
+#story{
+    background-color:#f8f8f8;
+    padding:27px 0 64px;
+}
+
+.story_inner>div{
+    width:82.933%;
+    height:328px;
+    margin:0 auto;
+    border:3px solid #f47933;
+    border-radius: 2px;
+    padding:22px 14px;
+    background:url(../img/cjw-bg-smart.jpg) no-repeat right bottom #fff;
+    background-size:276px;
+}
+
+.story_inner>div.fresh{
+    background-image: url(../img/cjw-bg-fresh.jpg);
+    border-color:#01b5d6;
+    background-size:275px;
+}
+
+.story_inner>div.classic{
+    background-image: url(../img/cjw-bg-classic.jpg);
+    border-color:#ef4665;
+    background-size:250px;
+}
+
+.story_inner>div{
+    display: none;
+}
+
+.story_inner>div.smart{
+    display: block;
+}
+
+.story_inner>div>span{
+    display: block;
+    width:72px;
+    height:27px;
+    background:url(../img/cjw-logo-smart.png) no-repeat 0 2px;
+    background-size:100%;
+    text-indent: -9999px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.story_inner>div.fresh>span{
+    background-image: url(../img/cjw-logo-fresh.png);
+    background-position: 0 0;
+}
+
+.story_inner>div.classic>span{
+    background-image: url(../img/cjw-logo-classic.png);
+}
+
+
+.story_inner>div strong{
+    font-size:2.0rem;
+    color:#343434;
+    line-height: 1.25;
+}
+
+.story_inner>div strong>span{
+    display: block;
+}
+
+.story_inner>div p{
+    font-size:1.3rem;
+    line-height: 1.154;
+    color:#343434;
+    margin:7px 0 13px;
+}
+
+.story_inner>div a{
+    display: block;
+    width:150px;
+    height:35px;
+    line-height: 31px;
+    text-align: center;
+    font-size:1.1rem;
+    color:#343434;
+    border:2px solid #cfcfcf;
+    background-color:#fff;
+}
+
+.story_inner>div a:after{
+    content:'';
+    display: inline-block;
+    width:8px;
+    height:8px;
+    background:url(../img/cjw-plus-story-orange.png) no-repeat;
+    background-size:contain;
+    margin-left: 15px;
+}
+
+.story_inner>div.fresh a:after{
+    background-image: url(../img/cjw-plus-story-blue.png);
+}
+
+.story_inner>div.classic a:after{
+    background-image: url(../img/cjw-plus-story-red.png);
+}
+
+
+/* cast 영역 */
+
+#cast{
+    background-color:#f8f8f8;
+    padding-bottom: 30px;
+}
+
+.cast_inner .title{
+    height:147px;
+    text-align: center;
+    background:url(../img/cjw-bg-foodCast.jpg) no-repeat center/cover;
+    padding-top: 38px;
+    margin-bottom: 19px;
+}
+
+.cast_inner .title h2{
+    font-family: "nbg","돋움",dotum,sans-serif;
+    font-size:3.3rem;
+    font-weight: normal;
+    color:#fff;
+    margin-bottom: 12px;
+}
+
+.cast_inner .title a{
+    display:inline-block;
+    width:230px;
+    height: 40px;
+    line-height: 36px;
+    border-radius: 2px;    
+    border:2px solid rgba(255,255,255,0.6);
+    background-color:rgba(0,0,0,0.4);
+    font-size:1.3rem;
+    color:#fff;
+}
+
+.cast_inner .title a:after{
+    content:'';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background:url(../img/cjw-plus-section-blue.png) no-repeat;
+    background-size:contain;
+    margin-left: 11px;
+}
+
+.cast_inner .section_slider{
+    width:82.933%;
+    margin:0 auto 61px;
+    background-color:#fff;
+    border:1px solid rgba(149,149,149,.6);
+    border-radius:3px;
+    padding:2px;
+}
+
+.cast_inner .section_slider>div>span{
+    display: block;
+    height:199px;
+    background:url(../img/cjw-img-foodCast.jpg) no-repeat center/cover;
+}
+
+.cast_inner .section_slider>div a{
+    display: block;
+    text-align: center;
+    padding:15px 0;
+}
+
+.cast_inner .section_slider>div a strong{
+    font-size:1.3rem;
+    color:#626262;
+}
+
+.cast_inner .banner{
+    display: block;
+    position: relative;
+    width:82.9333%;
+    background:url(../img/cjw-icon-foodLab.png) no-repeat #02b5d6 14px center;
+    background-size:58px;
+    border-radius: 3px;
+    margin:0 auto 11px;
+    padding:25px 51px 22px 98px;
+
+}
+
+.cast_inner .banner:last-child{
+    margin-bottom: 0;
+    background-image:url(../img/cjw-icon-bottleRecipe.png);
+    background-color:#76d9c5;
+}
+
+.cast_inner .banner h3{
+    font-size:2rem;
+    font-weight: normal;
+    color:#000;
+    margin-bottom: 9px;
+}
+.cast_inner .banner p{
+    font-size:1.1rem;
+    line-height: 1.182;
+    color:#000;
+}
+
+.cast_inner .banner p span{
+    display: block;
+}
+
+.cast_inner .banner>span{
+    position: absolute;
+    right:12px;
+    top:50%;
+    transform: translateY(-50%);
+    background:url(../img/cjw-arrow-section-right.png) no-repeat;
+    background-size:contain;
+    width:16px;
+    height:29px;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+.banner.labtop{display: none;}
+
+
+/* knowhow*/
+#knowhow{
+    padding-bottom: 36px;
+    background-color:#f8f8f8;
+}
+
+.knowhow_inner .title{
+    height:147px;
+    padding-top: 36px;
+    margin-bottom: 19px;
+    background:url(../img/cjw-bg-foodKnowhow-mobile.jpg) no-repeat center;
+    background-size:cover;
+    text-align: center;
+}
+
+.knowhow_inner h2{
+    font-family: "nbg","돋움",dotum,sans-serif;
+    margin-bottom: 14px;
+    color:#fff;
+    font-size:3.3rem;
+    font-weight: normal;
+}
+
+.knowhow_inner .title a{
+    display: inline-block;
+    width: 230px;
+    height: 40px;
+    border:2px solid rgba(255,255,255,0.6);
+    background:rgba(0,0,0,0.4);
+    color:#fff;
+    font-size:1.3rem;
+    line-height: 36px;
+}
+.knowhow_inner .title a:after{
+    content:'';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-left: 11px;
+    background:url(../img/cjw-plus-section-yellow.png) no-repeat;
+    background-size:contain;
+}
+.knowhow_inner .section_slider{
+    width: 82.933%;
+    padding: 2px;
+    margin:0 auto 61px;
+    border:1px solid rgba(149,149,149,0.6);
+    border-radius: 3px;
+    background:#fff;
+}
+
+.knowhow_inner .section_slider>div{}
+.knowhow_inner .section_slider div>span{
+    display: block;
+    height: 199px;
+    background:url(../img/cjw-img-specialRecipe.jpg) no-repeat center;
+    background-size:cover;
+}
+
+.knowhow_inner .section_slider div a{
+    display: block;
+    padding:13px 0 15px;
+    text-align: center;
+}
+
+.knowhow_inner .section_slider div strong{
+    color:#626262;
+    font-size:1.3rem;
+    line-height: 1.154;
+}
+
+.knowhow_inner .banner{
+    display: block;
+    width: 82.933%;
+    border-radius: 3px;
+    background:url(../img/cjw-icon-foodLab.png) no-repeat #02b5d6 12px center;
+    background-size:58px;
+    margin:0 auto 10px;
+    padding:25px 51px 23px 99px;
+    position: relative;
+}
+
+.knowhow_inner .banner.labtop{
+    display: none;
+}
+
+.knowhow_inner .banner.pc{
+    display: none;
+}
+
+.knowhow_inner .banner:after{
+    content:'';
+    background:url(../img/cjw-arrow-section-right.png) no-repeat;
+    background-size:contain;
+    width: 16px;
+    height: 29px;
+    position: absolute;
+    right:12px;
+    top:50%;
+    margin-top: -15px;
+}
+
+.knowhow_inner .bannerWrap .banner{
+    margin-bottom: 0;
+    background-image: url(../img/cjw-icon-eShop.png);
+    background-color:#f4cb4d;
+}
+
+.knowhow_inner .banner h3{
+    font-size:2rem;
+    color:#000;
+    font-weight: normal;
+    margin-bottom: 9px;
+}
+
+.knowhow_inner .banner p{
+    font-size:1.1rem;
+    color:#000;
+    line-height: 1.182;
+}
+
+
+
+/* friends */
+
+#friends{
+    padding-bottom: 32px;
+    background:#f8f8f8;
+}
+
+.friends_inner .title{
+    height: 147px;
+    background:url(../img/cjw-bg-friends.jpg) no-repeat center;
+    background-size:cover;
+    text-align: center;
+    padding-top: 36px;
+    margin-bottom: 19px;
+}
+
+.friends_inner .title h2{
+    font-family: "nbg","돋움",dotum,sans-serif;
+    font-size:3.3rem;
+    color:#fff;
+    font-weight: normal;
+    margin-bottom: 12px;
+}
+
+.friends_inner .title a{
+    display: inline-block;
+    width: 230px;
+    height: 40px;
+    line-height: 36px;
+    border:2px solid rgba(255,255,255,0.6);
+    border-radius: 2px;
+    background:rgba(0,0,0,0.4);
+    font-size:1.3rem;
+    color:#fff;
+}
+
+.friends_inner .title a:after{
+    content:'';
+    display: inline-block;
+    background:url(../img/cjw-plus-section-green.png) no-repeat;
+    background-size:contain;
+    width: 10px;
+    height: 10px;
+    margin-left: 11px;
+}
+
+.friends_inner .banner{
+    display: block;
+    width:82.933%;
+    margin:0 auto 10px;
+    position: relative;
+}
+
+.friends_inner .friends_b{
+    overflow: hidden;
+    padding:24px 12px;
+    background-color:#f4cb4d;
+    color:#000;
+}
+
+.friends_inner .friends_b .bg{
+    position: absolute;
+    right:-29px;
+    bottom:0;
+    width: 134px;
+    height: 139px;
+    background:url(../img/cjw-icon-foodBox.png) no-repeat;
+    background-size:contain;
+}
+
+.friends_inner .friends_b strong{
+    font-size:1.8rem;
+    line-height: 1.111;
+    font-weight: normal;
+}
+
+.friends_inner .friends_b .line{
+    display: block;
+    width:67.524%;
+    height: 2px;
+    margin:14px 0;
+    background-color:rgba(255,255,255,.5);
+}
+
+.friends_inner .friends_b p{
+    margin-bottom: 21px;
+    font-size:1.1rem;
+    line-height: 1.182;
+}
+
+.friends_inner .friends_b span:last-child{
+    display: block;
+    width: 145px;
+    height: 35px;
+    line-height: 31px;
+    border:2px solid #fff;
+    border-radius: 2px;
+    background:rgba(255,255,255,.5);
+    font-size:1.3rem;
+    text-align: center;
+}
+
+.friends_inner .banner:nth-of-type(2){
+    padding:20px 51px 24px 99px;
+    background:url(../img/cjw-icon-friendsPanel.png) no-repeat #02b5d6 15px center;
+    background-size:71px;
+    color:#fff;
+}
+
+.friends_inner .banner:nth-of-type(2) h3{
+    margin-bottom: 8px;
+    font-size:1rem;
+    font-weight: normal;
+    color:#fff;
+}
+
+.friends_inner .banner:nth-of-type(2) p{
+    font-size:1.2rem;
+    line-height: 1.083;
+}
+
+.friends_inner .banner:after{
+    content:'';
+    background:url(../img/cjw-arrow-section-right.png) no-repeat;
+    background-size:contain;
+    position: absolute;
+    top:50%;
+    right:12px;
+    width: 15px;
+    height: 29px;
+    margin-top: -15px;
+}
+
+.friends_inner .box{
+    width: 82.933%;
+    margin:0 auto;
+}
+
+
+.friends_inner .bannerBox{
+    float:left;
+    width: 50%;
+    height: 113px;
+    padding-top: 13px;
+    border:2px solid #cfcfcf;
+    background:#fff;
+    text-align: center;
+}
+
+.friends_inner .bannerBox:nth-child(2){
+    border-left:none;
+}
+
+.friends_inner .bannerBox h3{
+    padding-top: 70px;
+    background:url(../img/cjw-icon-foodEditor.png) no-repeat top center;
+    background-size:62px;
+    color:#000;
+    font-size:1.2rem;
+    font-weight: normal;
+}
+
+.friends_inner .bannerBox:nth-child(2) h3{
+    background-image: url(../img/cjw-icon-meetingTalk.png);
+    background-position: center 5px;
+    background-size:53px;
+}
+
+
+/* SNS */
+
+#sns{
+    padding:36px 0 33px;
+}
+
+.sns_inner{}
+
+.sns_inner .title{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.sns_inner .title h2{
+    font-family: "nbg","돋움",dotum,sans-serif;
+    font-size:3.3rem;
+    font-weight: normal;
+    color:#000;
+    margin-bottom: 14px;
+}
+
+.sns_inner .title p{
+    font-size:1.4rem;
+    color:#4b4b4b;
+}
+
+.sns_inner .sns_link{
+    width:82.933%;
+    margin:0 auto 31px;
+}
+
+.sns_link ul{}
+
+.sns_link ul li{
+    float:left;
+    width:calc((100% - 35px)/5);
+}
+
+.sns_link ul li:last-child{
+    width:35px;
+}
+
+.sns_link ul li a{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background:url(../img/cjw-sns-facebook.png) no-repeat;
+    background-size:contain;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+.sns_link ul li:nth-child(2) a{
+    background-image: url(../img/cjw-sns-kakao.png);
+}
+
+.sns_link ul li:nth-child(3) a{
+    background-image: url(../img/cjw-sns-blog.png);
+}
+
+.sns_link ul li:nth-child(4) a{
+    background-image: url(../img/cjw-sns-twitter.png);
+}
+
+.sns_link ul li:nth-child(5) a{
+    background-image: url(../img/cjw-sns-instagram.png);
+}
+
+.sns_link ul li:nth-child(6) a{
+    background-image: url(../img/cjw-sns-youtube.png);
+}
+
+.sns_inner .sns_con{
+    width:82.933%;
+    margin:0 auto;
+}
+
+.sns_inner .sns_con a{
+    display: block;
+    height:160px;
+    border:2px solid #f8f7f7;
+}
+
+.sns_inner .sns_con a>span{
+    float:left;
+    width: 50%;
+    height:100%;
+    border-right: 2px solid #f8f7f7;
+    background:url(../img/cjw-img-snsNaver.jpg) no-repeat center/cover;
+}
+
+.sns_inner .sns_con a:last-child>span{
+    float:right;
+    border-right: 0;
+    background-image: url(../img/cjw-img-snsFacebook.jpg);
+}
+
+
+.sns_inner .sns_con a div{
+    float:left;
+    position: relative;
+    width: 50%;
+    height: 100%;
+    border-left:2px solid #f8f7f7;
+    padding:18px 5px 0 10px;
+}
+
+.sns_inner .sns_con a:last-child div{
+    border-left:none;
+    border-right:2px solid #f8f7f7;
+    
+}
+
+
+.sns_inner .sns_con a div h3{
+    height:18px;
+    line-height: 18px;
+    background:url(../img/cjw-sns-blog.png) no-repeat right center;
+    background-size:auto 100%;
+    font-size:1.3rem;
+    font-weight: normal;
+    color:#000;
+}
+
+.sns_inner .sns_con a:last-child div h3{
+    background-image:url(../img/cjw-sns-facebook.png);
+}
+
+.sns_inner .sns_con a div p{
+    position: absolute;
+    left:10px;
+    bottom:15px;
+    font-size:1.3rem;
+    color:#494949;
+    line-height: 1.077;
+}
+
+/* footer - mobile */
+
+footer{
+    background-color:#fbfbfb;
+    border-top:1px solid #cfcfcf;
+}
+
+.link_wrap{}
+.link_wrap>a{
+    display: block;
+    height: 50px;
+    line-height: 49px;
+    padding-left: 8.933%;
+    border-bottom: 1px solid #cfcfcf;
+    font-size:1.2rem;
+    color:#02b5d6;
+    text-transform: uppercase;
+}
+.link_wrap .f_menu{}
+.link_wrap .f_menu li{
+    float:left;
+    width: 50%;
+}
+.link_wrap .f_menu li a{
+    display: block;
+    height:50px;
+    line-height: 49px;
+    border-bottom:1px solid #cfcfcf;
+    padding-left: 17.866%;
+    font-size:1.2rem;
+    color:#767676;
+}
+
+.link_wrap .f_menu li a:hover,
+.link_wrap .f_menu li a:focus{
+    color:#000;
+}
+
+.link_wrap .f_menu li:nth-child(even) a{
+    border-left:1px solid #cfcfcf;
+    padding-left: 13.6%;
+}
+
+.copy_wrap{}
+.copy_wrap>span{}
+.copy_wrap>span a{
+    display: block;
+    float:left;
+    width: 50%;
+    height: 50px;
+    line-height: 49px;
+    border-bottom:1px solid #cfcfcf;
+    font-size:1rem;
+    color:#767676;
+    padding-left: 8.933%;
+}
+.copy_wrap>span a:last-child{
+    border-left:1px solid #cfcfcf;
+    padding-left: 6.8%;
+}
+.copy_wrap>span a:before{
+    content:'';
+    display: inline-block;
+    width:25px;
+    height: 49px;
+    background:url(../img/cjw-logo-ccm.png) no-repeat center/contain;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.copy_wrap>span a:last-child:before{
+    background-image: url(../img/cjw-logo-wa.png);
+    width:18px;
+    margin-right: 7px;
+}
+
+.copy_wrap .copy{
+    padding-top: 29px;
+    text-align: center;
+}
+.copy_wrap .copy>span{
+    display: inline-block;
+    width: 40px;
+    margin-bottom: 22px;
+}
+.copy_wrap .copy>span img{
+    width: 100%;
+}
+.copy_wrap .copy p{}
+
+.copy_wrap .copy p:first-of-type{
+    font-size:0;
+}
+
+.copy_wrap .copy p:last-child{
+    height:45px;
+    line-height: 45px;
+    font-size:1rem;
+    color:#fbfbfb;
+    background-color:#666;
+    margin-top: 24px;
+}
+.copy_wrap .copy p span{
+    font-size:1.1rem;
+    color:#666;
+    line-height: 1.455;
+}
+
+.copy_wrap .copy p span:first-child:after{
+    content:"|";
+    font-size:1.1rem;
+    color:#666;
+    margin:0 11px;
+}
+
+.copy_wrap .copy p span:last-child{
+    display: block;
+}
+
+.copy_wrap .copy p span a{
+    color:#666;
+}
+/* end mobile */
+
+
+
+/* start 768 */
+@media all and (min-width:768px){
+	
+	/* header - 768 */
+	header {
+		height:80px;
+	}
+    
+    .logo{
+        top:26px;
+        width:107px;
+    }
+    
+    .sch_form .btn_sch_off{
+        font-size:2.1rem;
+    }
+
+    .sch_form input{
+        width:71.615%;
+        height:40px;
+        line-height:40px;
+        border-radius: 5px;
+        margin:23px 1.953% 17px 2.214%;
+        padding-left: 22px;
+        font-size:2.1rem;
+    }
+
+    .sch_form .btn_sch{
+        width:70px;
+        height:40px;
+        border-radius: 5px;
+        background-size:20px;
+        vertical-align:2px;
+    }
+
+    .btn_sch_on{
+        left:5.208%;
+        top:30px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .btn_nav{
+        right:5.078%;
+        top:32px;
+        width: 42px;
+        height:26px;
+    }
+
+    .btn_nav span{
+        height:6px;
+        border-radius: 6px;
+    }
+
+    .btn_nav span:nth-child(2){
+        margin:4px 0;
+    }
+
+
+    /* nav 영역 */
+
+    .nav_inner{
+        width:66.146%;
+        padding-top: 29px;
+    }
+
+    .nav_inner>div{
+        width:83.071%;
+        margin-left: 7.086%;
+        margin-bottom: 16px;
+    }
+
+    .nav_inner>div a:nth-child(1){
+         width: 100px;
+        height: 35px;
+    }
+
+
+    .nav_inner>div a:nth-child(2){
+        font-size:2.1rem;
+        line-height:35px;
+    }
+
+    .nav_inner .gnb{
+        width:83.071%;
+        margin-left:7.086%;
+    }
+
+    .nav_inner .gnb>li>a{
+        height:91px;
+        line-height: 90px;
+        padding-left: 4.265%;
+        font-size:2.5rem;
+    }
+
+
+    .nav_inner .gnb>li>a span{
+        width:20px;
+        height:10px;
+    }
+
+    .nav_inner .left ul li a{
+        height:70px;
+        line-height: 69px;
+        padding-left: 5.556%;
+        font-size:2.1rem;
+
+    }
+
+    .nav_inner>a{
+        height: 100px;
+        line-height: 98px;
+        padding-left: 10.63%;
+        font-size:2.5rem;
+    }
+
+
+    .nav_inner>a:after{
+        right:12.008%;
+        width: 40px;
+        height: 40px;
+    }
+
+    .nav_inner>a:last-child:after{
+        right:11.22%;
+    }
+    
+    
+    #visual{
+    margin-top: 80px;  
+    }
+
+    .img_wrap{
+        height:750px;
+        padding-top: 180px;
+    }
+
+    .img_wrap>span{
+        font-size:3.3rem;
+    }
+
+    .img_wrap h2{
+        font-size:7.5rem;
+        margin-top: 23x;
+        margin-bottom: 23px;
+    }
+
+    .img_wrap p{
+        width:80.99%;
+        line-height: 1.208;
+        font-size:2.4rem;
+        margin-bottom: 33px;
+    }
+
+
+    .img_wrap a{
+        display: inline-block;
+        width: 300px;
+        height:70px;
+        line-height: 66px;
+        font-size:2.1rem;
+        border-radius: 3px;
+        border:2px solid rgba(255,255,255,0.4);
+    }
+    
+    .img_wrap .labtop{display: none;}
+
+    /* mobile_nav */
+
+    nav.section{
+        height:70px;
+        text-align: center;
+    }
+
+    nav.section ul{
+        display: inline-block;
+    }
+
+    nav.section ul li{
+        width:auto;
+    }
+    
+    nav.section li:after{
+        content:"|";
+        font-size:2rem;
+        color:#959595;
+        margin:0 30px;
+    }
+    
+    nav.section li:last-child:after{
+        content:none;
+    }
+
+    nav.section li a{
+        display: inline-block;
+        line-height: 69px;
+        font-size:2rem;
+    }
+
+
+    /* story */
+
+    #story{
+        padding:36px 0 97px;
+    }
+    
+    .story_inner{
+        width:80.989%;
+        margin:0 auto;
+    }
+
+    .story_inner>div{
+        float:left;
+        width:49.518%;
+        height:375px;
+        border-width: 2px;
+        border-radius: 4px;
+        padding:24px 22px;
+        margin-right: 0.964%;
+        background-size:274px;
+    }
+    
+    .story_inner>div:nth-child(2){
+         margin-right: 0;   
+    }
+    
+    .story_inner>div.fresh{
+        display: block;
+    }
+
+
+    .story_inner>div.fresh{
+        background-size:293px;
+    }
+
+    .story_inner>div.classic{
+        background-size:239px;
+    }
+
+
+    .story_inner>div>span{
+        background-position: 0 0;
+        margin-bottom:11px;
+    }
+    
+    .story_inner>div.classic>span{
+        background-position: 0 1px;
+    }
+
+    .story_inner>div p{
+        font-size:1.7rem;
+        line-height: 1.176;
+        margin:8px 0 27px;
+    }
+    .story_inner>div a{
+        display: inline-block;
+        width:auto;
+        height:45px;
+        line-height:41px;
+        font-size:1.5rem;
+        padding:0 20px 0 17px;
+    }
+
+    .story_inner>div a:after{
+        width:15px;
+        height:15px;
+        margin-left: 18px;
+        vertical-align: -2;
+    }
+
+
+    /* cast 영역 */
+
+    #cast{
+        padding-bottom: 106px;
+    }
+
+    .cast_inner .title{
+        height:294px;
+        padding-top: 82px;
+        margin-bottom: 38px;
+    }
+
+    .cast_inner .title h2{
+        font-size:5.8rem;
+        margin-bottom: 30px;
+    }
+
+    .cast_inner .title a{
+        width:350px;
+        height: 70px;
+        line-height: 66px; 
+        font-size:2.1rem;
+    }
+
+    .cast_inner .title a:after{
+        width: 19px;
+        height: 20px;
+        margin-left: 36px;
+        vertical-align: -2;
+    }
+
+    .cast_inner .section_slider{
+        width:84.375%;
+        margin-bottom: 122px;
+        border-width:2px;
+        border-radius:5px;
+        padding:3px;
+    }
+
+    .cast_inner .section_slider>div>span{
+        height:397px;
+    }
+
+    .cast_inner .section_slider>div a{
+        padding:30px 0;
+    }
+
+    .cast_inner .section_slider>div a strong{
+        font-size:2.4rem;
+    }
+
+    .cast_inner .banner{
+        width:84.375%;
+        background-position: 28px center;
+        background-size:100px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        padding:55px 105px 44px 157px;
+
+    }
+    .cast_inner .banner h3{
+        font-size:3.3rem;
+        margin-bottom: 18px;
+    }
+    .cast_inner .banner p{
+        font-size:2.0rem;
+        line-height: 1.3;
+    }
+
+    .cast_inner .banner>span{
+        right:35px;
+        width:29px;
+        height:55px;
+    }
+    
+    
+    /* knowhow*/
+    #knowhow{
+        padding-bottom: 109px;
+    }
+
+    .knowhow_inner .title{
+        height:293px;
+        padding-top: 81px;
+        margin-bottom: 68px;
+    }
+
+    .knowhow_inner h2{
+        margin-bottom: 30px;
+        font-size:5.8rem;
+        font-family: "nbg","돋움",dotum,sans-serif;
+    }
+
+    .knowhow_inner .title a{
+        width: 350px;
+        height: 70px;
+        font-size:2.1rem;
+        line-height: 66px;
+    }
+    .knowhow_inner .title a:after{
+        width: 20px;
+        height: 20px;
+        margin-left: 36px;
+        vertical-align: -2px;
+    }
+    .knowhow_inner .section_slider{
+        width: 84.375%;
+        padding: 3px;
+        margin-bottom: 90px;
+        border-width:2px;
+        border-radius: 5px;
+    }
+
+    .knowhow_inner .section_slider>div{}
+    .knowhow_inner .section_slider div>span{
+        height: 397px;
+    }
+
+    .knowhow_inner .section_slider div a{
+        padding: 27px 0;
+
+    }
+
+    .knowhow_inner .section_slider div strong{
+        font-size:2.4rem;
+        line-height: 1.25;
+    }
+
+    .knowhow_inner .banner{
+        width:  84.375%;
+        border-radius: 5px;
+        background-position: 41px center;
+        background-size:110px;
+        margin-bottom: 20px;
+        padding:41px 104px 38px 211px;
+    }
+    
+    .knowhow_inner .banner:last-child{
+        background-position: 46px center;
+        background-size:100px;
+    }
+
+    .knowhow_inner .banner:after{
+        width: 29px;
+        height: 55px;
+        right:34px;
+        margin-top: -28px;
+    }
+
+    .knowhow_inner .banner h3{
+        font-size:3.3rem;
+        margin-bottom: 18px;
+    }
+
+    .knowhow_inner .banner p{
+        font-size:2.0rem;
+        line-height: 1.3;
+    }
+    
+    /* friends */
+
+    #friends{
+        padding-bottom: 63px;
+    }
+
+    .friends_inner .title{
+        height: 294px;
+        padding-top: 82px;
+        margin-bottom: 38px;
+    }
+
+    .friends_inner .title h2{
+        font-size:5.8rem;
+        margin-bottom: 29px;
+    }
+
+    .friends_inner .title a{
+        width: 350px;
+        height: 70px;
+        line-height:66px;
+        font-size:2.1rem;
+    }
+
+    .friends_inner .title a:after{
+        width: 20px;
+        height: 20px;
+        margin-left: 41px;
+        vertical-align: -2px;
+    }
+
+    .friends_inner .banner{
+        width:84.375%;
+        margin:0 auto 20px;
+    }
+
+    .friends_inner .friends_b{
+        padding:48px 37px;
+    }
+
+    .friends_inner .friends_b .bg{
+        right:-50px;
+        width: 277px;
+        height: 277px;
+    }
+
+    .friends_inner .friends_b strong{
+        font-size:3.3rem;
+        line-height: 1.212;
+    }
+
+    .friends_inner .friends_b .line{
+        width:64.815%;
+        height: 3px;
+        margin:26px 0 28px;
+    }
+
+    .friends_inner .friends_b p{
+        margin-bottom: 44px;
+        font-size:2.0rem;
+        line-height: 1.2;
+    }
+
+    .friends_inner .friends_b span:last-child{
+        width: 250px;
+        height: 70px;
+        line-height: 66px;
+        font-size:2.1rem;
+    }
+
+    .friends_inner .banner:nth-of-type(2){
+        padding:42px 87px 52px 211px;
+        margin-bottom: 40px;
+        background-position: 60px center;
+        background-size:110px;
+    }
+
+    .friends_inner .banner:nth-of-type(2) h3{
+        margin-bottom: 17px;
+        font-size:1.8rem;
+    }
+
+    .friends_inner .banner:nth-of-type(2) p{
+        font-size:2.0rem;
+        line-height: 1.3;
+    }
+
+    .friends_inner .banner:after{
+        right:33px;
+        width: 29px;
+        height: 55px;
+        margin-top: -28px;
+    }
+
+    .friends_inner .box{
+        width: 84.375%;
+    }
+
+
+    .friends_inner .bannerBox{
+        height: 225px;
+        padding-top: 25px;
+    }
+
+    .friends_inner .bannerBox h3{
+        padding-top: 141px;
+        background-size:123px;
+        font-size:2.1rem;
+    }
+
+    .friends_inner .bannerBox:nth-child(2) h3{
+        background-position: center 9px;
+        background-size:106px;
+    }
+    
+
+    /* SNS */
+
+    #sns{
+        padding:76px 0 86px;
+    }
+
+    .sns_inner{}
+
+    .sns_inner .title{
+        margin-bottom: 50px;
+    }
+
+    .sns_inner .title h2{
+        font-size:5.8rem;
+        margin-bottom: 24px;
+    }
+
+    .sns_inner .title p{
+        font-size:2.1rem;
+    }
+
+    .sns_inner .sns_link{
+        width:80.99%;
+        margin-bottom: 62px;
+    }
+
+    .sns_link ul{}
+
+    .sns_link ul li{
+        width: calc((100% - 70px)/5);
+    }
+    
+    .sns_link ul li:last-child{
+        width:70px;
+    }
+
+    .sns_link ul li a{
+        width: 70px;
+        height: 70px;
+    }
+
+
+    .sns_inner .sns_con{
+        width:84.375%;
+    }
+
+    .sns_inner .sns_con a{
+        height:280px;
+    }
+
+
+    .sns_inner .sns_con a div{
+        padding:35px 14px 0 20px;
+    }
+
+    .sns_inner .sns_con a div h3{
+        height:36px;
+        line-height: 36px;
+        font-size:1.8rem;
+    }
+
+    .sns_inner .sns_con a div p{
+        left:21px;
+        bottom:44px;
+        font-size:2.0rem;
+        line-height: 1.2;
+    }
+
+	/* footer - mobile */
+
+  
+
+    .link_wrap{}
+    .link_wrap>a{
+        height: 100px;
+        line-height: 98px;
+        padding-left: 7.682%;
+        font-size:2.0rem;
+    }
+    .link_wrap .f_menu{}
+    .link_wrap .f_menu li{
+        float:left;
+        width: 50%;
+    }
+    .link_wrap .f_menu li a{
+        height:79px;
+        line-height: 78px;
+        padding-left: 15.364%;
+        font-size:2.0rem;
+    }
+
+    .link_wrap .f_menu li:nth-child(even) a{
+        padding-left: 13.541%;
+    }
+
+    .copy_wrap{}
+    .copy_wrap>span{}
+    .copy_wrap>span a{
+        height: 79px;
+        line-height: 78px;
+        font-size:2.0rem;
+        padding-left: 7.682%;
+    }
+    .copy_wrap>span a:last-child{
+        padding-left: 6.510%;
+    }
+    .copy_wrap>span a:before{
+        width:34px;
+        height: 42px;
+    }
+
+    .copy_wrap>span a:last-child:before{
+        width:32px;
+        margin-right:11px;
+    }
+
+    .copy_wrap .copy{
+        padding-top: 43px;
+    }
+    .copy_wrap .copy>span{
+        width: 80px;
+        margin-bottom: 43px;
+    }
+    
+    .copy_wrap .copy p:first-of-type{
+        font-size:0;
+    }
+
+    .copy_wrap .copy p:last-child{
+        height:88px;
+        line-height: 88px;
+        font-size:1.8rem;
+        margin-top: 53px;
+    }
+    .copy_wrap .copy p span{
+        font-size:2.2rem;
+        line-height: 1.409;
+    }
+
+    .copy_wrap .copy p span:first-child:after{
+        font-size:2.2rem;
+        margin:0 22px;
+    }
+}  /* end 768 */
+
+
+/* start 1024 */
+@media all and (min-width:1024px){
+    .pc{display: block;}
+    .mobile{display: none;}
+
+    header{
+        position:static;
+        height:135px;
+    }
+    
+    header.on{
+        position: fixed;
+        height:70px;
+    }
+
+    .logo{
+        left:-9999px;
+    }
+    
+    .header_top{
+        width:88.477%;
+        margin:0 auto;
+        height:56px;
+    }
+    
+    header.on .header_top{
+        display: none;
+    }
+    
+    .sch_wrap{
+        float:left;
+        margin-top: 12px;
+        position: relative;
+    }
+
+    .sch_form{
+        display: block;
+        position: static;
+        width:auto;
+        height:auto;
+    }
+
+    .sch_form input{
+        width:140px;
+        height:31px;
+        line-height: 31px;
+        border:none;
+        border-bottom: 1px solid #969696;
+        border-radius:0;
+        background-color:transparent;
+        padding-left: 10px;
+        margin:0;
+        font-size:1.6rem;
+    }
+
+    .sch_form .btn_sch{
+        position: absolute;
+        width:15px;
+        height:15px;
+        right:0;
+        bottom:8px;
+        border-radius: 0;
+        background:url(../img/cjw-icon-search1.png) no-repeat;
+        background-size:contain;
+    }
+    
+    .t_menu{
+        float:right;
+        margin-top: 22px;
+    }
+    
+    .t_menu li{
+        float:left;
+    }
+    .t_menu li:before{
+        content: "|";
+        font-size:1.4rem;
+        color:#808080;
+        margin:0 14px;
+    }
+    
+    .t_menu li:first-child:before{
+        display: none;
+    }
+    
+    .t_menu li a{
+        font-size:1.4rem;
+        color:#808080;
+    }
+    
+    .t_menu li:first-child a{
+        color:#004bd8;
+    }
+
+    /* nav 영역 */
+
+    #navWrap{
+        display: block;
+        position: static;
+        height: auto;
+        background-color:#fff;
+        border-top:1px solid #cfcfcf;
+    }
+    
+    header.on #navWrap{
+        border-top:none;
+    }
+
+    .nav_inner{
+        position: static;
+        width:88.477%;
+        height:auto;
+        background-color:#fff;
+        padding-top:0;
+        overflow: visible;
+        margin:0 auto;
+    }
+
+    .nav_inner>div{
+        float:left;
+        width:auto;
+        margin-left:0;
+        margin-bottom:0;
+    }
+
+    .nav_inner>div a:nth-child(1){
+        width:120px;
+        height:42px;
+        margin-top: 18px;
+    }
+    
+    header.on .nav_inner>div a:nth-child(1){
+        width:110px;
+        height: 39px;
+        margin-top: 17px;
+    }
+
+    .nav_inner .gnb{
+        float:right;
+        width:auto;
+        margin-left:0;
+        margin-top: 9px;
+        border-top:none;
+    }
+    
+    header.on .nav_inner .gnb{
+        margin-top: 8px;
+    }
+    
+    .nav_inner .gnb>li{
+        float:left;
+    }
+    
+    .nav_inner .gnb>li:before{
+        content:'|';
+        font-size:1.6rem;
+        color:#000;
+        margin:0 20px;
+    }
+    
+    header.on .nav_inner .gnb>li:before{
+        font-size:1.5rem;
+    }
+    
+    .nav_inner .gnb>li:first-child:before{
+        display: none;
+    }
+
+    .nav_inner .gnb>li>a{
+        display: inline-block;
+        position: relative;
+        height:69px;
+        line-height: 69px;
+        border-bottom:none;
+        padding-left: 0;
+        font-size:1.6rem;
+        color:#000;
+    }
+    
+    header.on .nav_inner .gnb>li>a{
+        height:62px;
+        line-height: 62px;
+        font-size:1.5rem;
+    }
+    
+    .nav_inner .gnb>li>a:hover,
+    .nav_inner .gnb>li>a:focus{
+        color:#2fb7e6;
+        font-weight: bold;
+    }
+
+    .nav_inner .gnb>li:last-child.open>a{
+        border-bottom: none;
+    }
+    
+    .nav_inner .gnb>li>a span{
+        display:none;
+    }
+
+    .nav_inner .gnb>li.open>a span{
+        display: block;
+        position: absolute;
+        right:50%;
+        top:auto;
+        bottom:-15px;
+        margin-right:-13px;
+        transform: translateY(0);
+        background-image: url(../img/cjw-arrow-nav-bottom-fill.png);
+        width:25px;
+        height:14px;
+        z-index: 10;
+    }
+    .nav_inner .open .sub_wrap{
+        position: absolute;
+        left:0;
+        top:135px;
+        width: 100%;
+        display: block;
+        border-bottom:none;
+        border-top:1px solid #cfcfcf;
+        background-color:#fff;
+    }
+    
+    header.on .nav_inner .open .sub_wrap{
+        top:70px;
+    }
+
+    .nav_inner .sub_inner{
+        width: 88.477%;
+        margin:0 auto;
+    }
+
+    .nav_inner .sub_inner_con{
+        height:310px;
+    }
+
+    .nav_inner .left{
+        float:left;
+        width:51.876%;
+        height:100%;
+        border-right:1px solid #cfcfcf;
+        margin:10px 0;
+        padding-top: 44px;
+    }
+
+    .nav_inner .left ul{
+        background-color:transparent;
+        float:left;
+        width: 50%;
+    }
+    .nav_inner li:first-child ul{
+        width: 33.333%;
+    }
+
+    .nav_inner .left ul li{
+        width:auto;
+        margin-left: 0;
+        margin-bottom: 28px;
+    }
+
+    .nav_inner .left ul li a{
+        display: block;
+        height:auto;
+        line-height: 1;
+        border-bottom: none;
+        padding-left:0;
+        font-size:2rem;
+        color:#000;
+    }
+
+    .nav_inner .left ul:last-child li:last-child a{
+        border-bottom: none;
+    }
+
+    .nav_inner .right{
+        float:left;
+        width:48.124%;
+        height:100%;
+        background:url(../img/cjw-bg-nav-brandStory.jpg) no-repeat right bottom;
+        padding:52px 0 0 35px;
+    }
+    
+    .nav_inner li:nth-child(2) .right{}
+    
+    .nav_inner .right h3{
+        font-size:3.4rem;
+        font-weight: normal;
+        color:#000;
+    }
+    
+    .nav_inner .right a{
+        display: block;
+        width: 110px;
+        height: 46px;
+        line-height: 42px;
+        border:2px solid #cfcfcf;
+        margin-top: 25px;
+        text-align: center;
+        font-size:1.4rem;
+        color:#343434;
+    }
+    
+    .nav_inner .right a:after{
+        content:'';
+        display: inline-block;
+        background:url(../img/cjw-plus-story-blue.png) no-repeat;
+        background-size:contain;
+        width: 12px;
+        height: 12px;
+        margin-left: 20px;
+    }
+
+    .nav_inner>a{
+       display: none;
+    }
+
+    /* visual */
+
+    #visual{
+        margin-top: 0;  
+    }
+    
+    header.on +#visual{
+        margin-top:70px;
+    }
+
+    .img_wrap{
+        text-align: center;
+        height:638px;
+        background:url(../img/cjw-bg-main.jpg) no-repeat center/cover;
+        padding-top: 137px;
+        color:#fff;
+    }
+
+    .img_wrap>span{
+        font-size:3.8rem;
+    }
+    
+    .img_wrap h2{
+        font-family: "nbg","돋움",dotum,sans-serif;
+        font-size:8.3rem;
+        font-weight: normal;
+        margin-top: 18px;
+        margin-bottom: 24px;
+    }
+
+    .img_wrap p{
+        width:82.031%;
+        line-height: 1.2;
+        font-size:2.5rem;
+        margin: 0 auto 40px;
+    }
+
+    .img_wrap p span{
+        display: block;
+    }
+
+    .img_wrap a{
+        display: inline-block;
+        width:34.179%;
+        height:80px;
+        line-height: 76px;
+        font-size:2.5rem;
+        color:#fff;
+        border:2px solid rgba(255,255,255,0.6);
+        border-radius: 3px;
+        background-color:rgba(0,0,0,0.4);
+    }
+    
+   .img_wrap .labtop{display: none;}
+
+    /* story */
+
+    #mainContents{}
+
+    #story{
+        background-color:#f8f8f8;
+        padding:48px 0 102px;
+    }
+    
+    .story_inner{
+        width:82.031%;
+        margin:0 auto;
+    }
+
+    .story_inner>div{
+        float:left;
+        width:48.810%;
+        height:500px;
+        margin-right: 0.990%;
+        border-width: 2px;
+        border-radius: 4px;
+        padding:30px 34px;
+        background:url(../img/cjw-bg-smart.jpg) no-repeat right bottom #fff;
+        background-size:365px;
+    }
+
+    .story_inner>div.fresh{
+        background-image: url(../img/cjw-bg-fresh.jpg);
+        border-color:#01b5d6;
+        background-size:390px;
+    }
+
+    .story_inner>div.classic{
+        background-image: url(../img/cjw-bg-classic.jpg);
+        border-color:#ef4665;
+        background-size:318px;
+    }
+
+    .story_inner>div{
+        display: none;
+    }
+
+    .story_inner>div.smart{
+        display: block;
+    }
+
+    .story_inner>div>span{
+        display: block;
+        width:95px;
+        height:33px;
+        background:url(../img/cjw-logo-smart.png) no-repeat 0 2px;
+        background-size:100%;
+        text-indent: -9999px;
+        overflow: hidden;
+        margin-bottom: 19px;
+    }
+
+    .story_inner>div.fresh>span{
+        background-image: url(../img/cjw-logo-fresh.png);
+        background-position: 0 0;
+        height:36px;
+    }
+
+    .story_inner>div.classic>span{
+        background-image: url(../img/cjw-logo-classic.png);
+    }
+
+
+    .story_inner>div strong{
+        font-size:2.5rem;
+        color:#343434;
+        line-height: 1.32;
+    }
+
+    .story_inner>div strong>span{
+        display: block;
+    }
+
+    .story_inner>div p{
+        font-size:2.1rem;
+        line-height: 1.143;
+        color:#343434;
+        margin:7px 0 37px;
+    }
+
+    .story_inner>div a{
+        display: block;
+        width:250px;
+        height:60px;
+        line-height: 54px;
+        text-align: center;
+        font-size:2.0rem;
+        color:#343434;
+        border:2px solid #cfcfcf;
+        background-color:#fff;
+    }
+
+    .story_inner>div a:after{
+        content:'';
+        display: inline-block;
+        width:20px;
+        height:20px;
+        background:url(../img/cjw-plus-story-orange.png) no-repeat;
+        background-size:contain;
+        margin-left: 25px;
+        vertical-align: -2px;
+    }
+
+    .story_inner>div.fresh a:after{
+        background-image: url(../img/cjw-plus-story-blue.png);
+    }
+
+    .story_inner>div.classic a:after{
+        background-image: url(../img/cjw-plus-story-red.png);
+    }
+
+    /* cast 영역 */
+
+    #cast{
+        padding:74px 0 76px;
+        background:url(../img/cjw-bg-foodCast.jpg) no-repeat center/cover;
+    }
+    
+    .cast_inner{
+        width:82.031%;
+        margin:0 auto;
+    }
+
+    .cast_inner .title{
+        float:left;
+        width:38.81%;
+        height:250px;
+        background:none;
+        padding-top:3px;
+        margin-bottom:0;
+        text-align: left;
+    }
+
+    .cast_inner .title h2{
+        font-size:5.9rem;
+        margin-bottom: 27px;
+    }
+
+    .cast_inner .title a{
+        display:inline-block;
+        width:290px;
+        height: 78px;
+        line-height: 74px;
+        font-size:2.1rem;
+        text-align: center;
+    }
+
+    .cast_inner .title a:after{
+        margin-left: 11px;
+        vertical-align: -2px;
+    }
+
+    .cast_inner .section_slider{
+        float:right;
+        width:61.19%;
+        height:780px;
+        margin:0;
+        padding:0;
+        background-color:#fff;
+        border:2px solid #fff;
+        border-radius:5px 5px 5px 0;
+    }
+
+    .cast_inner .section_slider>div>span{
+        height:498px;
+    }
+
+    .cast_inner .section_slider>div a{
+        padding:39px 30px 0;
+    }
+    
+    .cast_inner .section_slider>div a h3{
+        font-size:3.3rem;
+        font-weight: normal;
+        color:#000;
+    }
+    
+    .cast_inner .section_slider>div a h3:after{
+        content:'';
+        display: block;
+        width: 60px;
+        height:3px;
+        background-color:rgba(0,181,216,.5);
+        margin:17px auto 16px;
+    }
+
+    .cast_inner .section_slider>div a strong{
+        font-size:2.1rem;
+        color:#000;
+    }
+    
+    .cast_inner .section_slider>div a p{
+        font-size:1.7rem;
+        color:#909090;
+        line-height: 1.176;
+        margin:10px 0 17px;
+    } 
+    
+    .cast_inner .section_slider>div a>span{
+        display: inline-block;
+        width: 200px;
+        height: 50px;
+        line-height: 50px;
+        border-radius: 2px;
+        background-color:#00b5d8;
+        text-align: center;
+        font-size:2.1rem;
+        color:#fff;
+    }
+
+    .cast_inner .banner{
+        float:left;
+        width:38.81%;
+        height:250px;
+        background:none;
+        background-color:#fff;
+        border-radius: 5px 0 0 0;
+        margin:0;
+        padding:39px 30px 0;
+        text-align: center;
+
+    }
+
+    .cast_inner .banner:last-child{
+        height: 280px;
+        border-radius: 0 0 0 5px;
+        background-image:none;
+        background-color:#02b5d6;
+    }
+
+    .cast_inner .banner h3{
+        font-size:3.3rem;
+        margin-bottom:0;
+    }
+    
+    .cast_inner .banner:last-child h3{
+        color:#fff;
+    }
+    
+    .cast_inner .banner h3:after{
+        content:'';
+        display: block;
+        width: 60px;
+        height:3px;
+        margin:16px auto 12px;
+        background-color:#02b5d6;    
+    }
+    
+    .cast_inner .banner:last-child h3:after{
+        background-color:rgba(255,255,255,.7);
+    }
+    
+    .cast_inner .banner p{
+        font-size:2.1rem;
+        line-height: 1.095;
+        color:#000;
+        margin-bottom: 18px;
+    }
+    
+    .cast_inner .banner:last-child p{
+        color:#fff;
+    }
+
+    .cast_inner .banner p span{
+        display: block;
+    }
+
+    .cast_inner .banner>span{
+        position: static;
+        display: block;
+        margin:0 auto;
+        transform: translateY(0);
+        background:none;
+        background-color:#00b5d8;
+        width:200px;
+        height:50px;
+        line-height: 50px;
+        border-radius: 2px;
+        text-align: center;
+        font-size:2.1rem;
+        color:#fff;
+        text-indent:0;
+        overflow: visible;
+    }
+    
+    .cast_inner .banner:last-child>span{
+        background-color:#fff;
+        color:#000;
+    }
+    
+    
+    /* knowhow*/
+    #knowhow{
+        padding:76px 0;
+        background: url(../img/cjw-bg-foodKnowhow.jpg) no-repeat right bottom -98px #f8f8f8;
+        background-size:500px;
+    }
+    
+    .knowhow_inner{
+        width:91.015%; /*932 */
+        margin-left: 9.08%;
+    }
+
+    .knowhow_inner .title{
+        float:left;  
+        width:35.089%;
+        height:246px;
+        padding-top:0;
+        margin-bottom:0;
+        background:#fff;
+        text-align: left;
+        padding:2px 0 0 3px;
+    }
+
+    .knowhow_inner h2{
+        margin-bottom:0;
+        color:#000;
+        font-size:5.8rem;
+        font-weight: normal;
+        margin-bottom: 34px;
+    }
+
+    .knowhow_inner .title a{
+        display: inline-block;
+        width: 284px;
+        height: 74px;
+        border:none;
+        background:#929292;
+        color:#fff;
+        font-size:2.1rem;
+        line-height: 74px;
+        text-align: center;
+        
+    }
+    .knowhow_inner .title a:after{
+        width: 19px;
+        height: 20px;
+        margin-left:4px;
+    }
+    .knowhow_inner .section_slider{
+        float:right;
+        width: 64.700%;
+        height:498px;
+        padding:0;
+        margin:0;
+        border:none;
+        border-radius:0;
+        background:#fff;
+    }
+
+    .knowhow_inner .section_slider>div{}
+    .knowhow_inner .section_slider div>span{
+        height: 246px;
+    }
+
+    .knowhow_inner .section_slider div a{
+        display: block;
+        padding:42px 15px 0;
+    }
+    
+    .knowhow_inner .section_slider div a h3{
+        font-size:3.3rem;
+        color:#000;
+        font-weight: normal;
+    }
+    .knowhow_inner .section_slider div a>span{
+        display: block;
+        margin:0 auto;
+        width: 200px;
+        height: 50px;
+        line-height: 50px;
+        background-color: #fcb54d;
+        color:#fff;
+        font-size:2.1rem;
+        
+    }
+    
+    .knowhow_inner .section_slider div a h3:after{
+        content:'';
+        display: block;
+        width:60px;
+        height:3px;
+        background-color:#fadeaf;
+        margin:17px auto 7px;
+    }
+
+    .knowhow_inner .section_slider div strong{
+        display: inline-block;
+        margin-bottom: 13px;
+        color:#000;
+        font-size:2.1rem;
+        line-height: 1.143;
+    }
+    
+    .knowhow_inner .section_slider div strong>span{
+        display: block;
+    }
+
+    .knowhow_inner .banner{
+        float:right;
+        display: block;
+        width: 39.595%;
+        height:248px;
+        border-radius:0;
+        background:none;
+        background-color: #76d9c5;
+        margin:0;
+        padding:42px 15px 0;
+    }
+    .knowhow_inner>a.banner{
+        margin-right: 25.3%;
+    }
+
+    .knowhow_inner .banner:after{
+        content:'';
+        background:none;
+        width: 16px;
+        height: 29px;
+        position: absolute;
+        right:12px;
+        top:50%;
+        margin-top: -15px;
+    }
+    
+    .knowhow_inner .banner h3{
+        font-size:3.3rem;
+        color:#000;
+        font-weight: normal;
+        text-align: center;
+    }
+    
+    .knowhow_inner .banner h3:after{
+        content:'';
+        display: block;
+        width:60px;
+        height:3px;
+        background-color:#d6f4ee;
+        margin:17px auto 7px;
+    }
+    
+    .knowhow_inner .banner>p{
+        margin-bottom: 13px;
+        color:#000;
+        line-height: 1.143;
+        font-size:2.1rem;
+    }
+    
+    .knowhow_inner .banner span{
+        display: block;
+        margin:0 auto;
+        width: 200px;
+        height: 50px;
+        line-height: 50px;
+        background-color: #fff;
+        color:#000;
+        font-size:2.1rem;
+        text-align: center;
+    }
+    
+    .knowhow_inner .bannerWrap{
+        float:left;
+        width:35.089%;
+        height:500px;
+        margin-top: -253px;
+    }
+
+    .knowhow_inner .bannerWrap .banner{
+        width: 100%;
+        height:125px;
+        margin-bottom: 0;
+        background-image: none;
+        background-color:#f4cb4d;
+        padding:32px 20px 0;
+    }
+    
+    .knowhow_inner .bannerWrap .banner.pc{
+        display: block;
+    }
+    
+    .knowhow_inner .bannerWrap .banner:after{
+        content:'';
+        position: absolute;
+        right:20px;
+        top:50%;
+        transform: translateY(-50%);
+        margin-top: 0;
+        width: 25px;
+        height: 47px;
+        background:url(../img/cjw-arrow-section-right.png) no-repeat;
+        background-size:contain;
+    }
+    
+    .knowhow_inner .bannerWrap .banner p{
+        font-size:1.7rem;
+        color:#000;
+        margin-bottom: 0;
+    }
+    
+    .knowhow_inner .bannerWrap .banner h3{
+        font-size:3.3rem;
+        text-align: left;
+        margin-bottom: 0;
+    }
+    
+    .knowhow_inner .bannerWrap .banner h3:after{content:none;}
+
+    .knowhow_inner .bannerWrap span.line{
+        display: block;
+        width: 100%;
+        height:2px;
+        background-color:#fff;
+        margin-top: 38px;
+    } 
+    
+    .knowhow_inner .bannerWrap>a:last-child span.line{
+        display: none;
+    }
+    
+    
+    /* friends */
+
+    #friends{
+        padding:63px 0 73px;
+        background:url(../img/cjw-bg-friends.jpg) no-repeat center/cover;
+    }
+    
+    .friends_inner{
+        width:82.031%; /* 839 */
+        margin:0 auto;
+    }
+
+    .friends_inner .title{
+        float:left;
+        width:61.025%;
+        height: 250px;
+        background:none;
+        text-align:left;
+        padding-top: 6px;
+        margin-bottom:0;
+    }
+
+    .friends_inner .title h2{
+        font-size:7.1rem;
+        color:#fff;
+        font-weight: normal;
+        margin-bottom: 34px;
+    }
+
+    .friends_inner .title a{
+        display: inline-block;
+        width: 290px;
+        height: 78px;
+        line-height: 74px;
+        border:2px solid rgba(255,255,255,0.6);  
+        border-radius: 2px;
+        font-size:2.1rem;
+        color:#fff;
+        text-align: center;
+    }
+
+    .friends_inner .title a:after{
+        width: 19px;
+        height: 21px;
+        margin-left: 4px;
+    }
+
+    .friends_inner .banner{
+        float:right;
+        display: block;
+        width:38.737%;
+        margin:0;
+        position: relative;
+    }
+
+    .friends_inner .friends_b{
+        float:left;
+        width:61.2%;
+        height:484px;
+        overflow: hidden;
+        padding:37px 32px;
+        background-color:#f4cb4d;
+        color:#000;
+    }
+    .friends_inner .friends_b .bg{
+        position: absolute;
+        right:25px;
+        bottom:32px;
+        width: 160px;
+        height: 172px;
+        background:url(../img/cjw-icon-foodBox.png) no-repeat;
+        background-size:contain;
+    }
+    
+    .friends_inner .friends_b b{
+        font-size:1.8rem;
+        color:#fff;
+        margin-bottom: 33px;
+    }
+
+    .friends_inner .friends_b strong{
+        font-size:3.3rem;
+        line-height: 1.007;
+        font-weight: normal;
+    }
+
+    .friends_inner .friends_b .line{
+        display: block;
+        width:67.524%;
+        height: 4px;
+        margin:30px 0 19px;
+        background-color:rgba(255,255,255,.5);
+    }
+
+    .friends_inner .friends_b p{
+        margin-bottom: 22px;
+        font-size:2.1rem;
+        line-height: 1.190;
+    }
+
+    .friends_inner .friends_b span:last-child{
+        display: block;
+        width: 200px;
+        height: 50px;
+        line-height: 46px;
+        border-color:rgba(255,255,255,0.5);
+        background:#fff;
+        font-size:2.1rem;
+        text-align: center;
+    }
+
+    .friends_inner .banner:nth-of-type(2){
+        height:250px;
+        padding:40px 47px 24px 44px;
+        background:none;
+        margin-top: -250px;
+        margin-bottom: 0;
+        background-color:#00b5d8;
+        color:#fff;
+        text-align: center;
+    }
+
+    .friends_inner .banner:nth-of-type(2) h3{
+        margin-bottom: 15px;
+        font-size:1.7rem;
+        font-weight: normal;
+        color:#fff;
+    }
+
+    .friends_inner .banner:nth-of-type(2) p{
+        font-size:2.1rem;
+        line-height: 1.095;
+        margin-bottom: 20px;
+    }
+    
+    .friends_inner .banner:nth-of-type(2) span{
+        display: inline-block;
+        width: 200px;
+        height:50px;
+        line-height: 50px;
+        border-radius: 2px;
+        font-size:2.1rem;
+        background-color:#fff;
+        color:#000;
+    }
+    
+
+    .friends_inner .banner:after{
+         content:none;
+    }
+    
+       
+    .friends_inner .friends_b:after{
+        content:none;
+    }
+
+
+    .friends_inner .box{
+       float:right;
+       width:38.737%;
+       height:484px;
+       margin:0;
+    }
+
+
+    .friends_inner .bannerBox{
+        float:none;
+        display: block;
+        width: 100%;
+        height:242px;
+        padding-top:27px;
+        border:2px solid #cfcfcf;
+        background:#fff;
+        text-align: center;
+    }
+
+    .friends_inner .bannerBox:nth-child(2){
+        border-left:2px solid #cfcfcf;
+    }
+
+    .friends_inner .bannerBox h3{
+        padding-top: 125px;
+        background:url(../img/cjw-icon-foodEditor.png) no-repeat top center;
+        background-size:112px;
+        color:#000;
+        font-size:2.4rem;
+        font-weight: normal;
+        margin-bottom: 9px;
+    }
+    
+    .friends_inner .bannerBox p{
+        font-size:1.6rem;
+        line-height: 1.1875;
+        color:#000;
+    }
+
+    .friends_inner .bannerBox:nth-child(2) h3{
+        background-image: url(../img/cjw-icon-meetingTalk.png);
+        background-position: center 5px;
+        background-size:111px;
+    }
+    
+    .friends_inner .bannerBox:last-child{
+        display: none;
+    }
+    
+    /* SNS */
+
+    #sns{
+        padding:90px 0 94px;
+        background:url(../img/cjw-bg-sns1.png),url(../img/cjw-bg-sns2.png);
+        background-repeat:no-repeat,no-repeat;
+        background-position: right top,left bottom -15%;
+        background-size:312px,458px;
+    }
+
+    .sns_inner{
+        width:82.031%;
+        margin:0 auto;
+    }
+
+    .sns_inner .title{
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .sns_inner .title h2{
+        font-size:5.8rem;
+        margin-bottom: 44px;
+    }
+
+    .sns_inner .title p{
+        font-size:2.9rem;
+    }
+
+    .sns_inner .sns_link{
+        width:100%;
+        margin:0 auto 68px;
+    }
+
+    .sns_link ul{}
+
+    .sns_link ul li{
+        float:left;
+        width:calc((100% - 56px)/5);
+    }
+
+    .sns_link ul li:last-child{
+        width:56px;
+    }
+
+    .sns_link ul li a{
+        width: 56px;
+        height: 56px;
+    }
+
+    .sns_inner .sns_con{
+        width:100%;
+        margin:0 auto;
+    }
+
+    .sns_inner .sns_con a{
+        display: block;
+        width:88.810%;
+        height:250px;
+    }
+    
+    .sns_inner .sns_con a span{
+        width:43.316%;
+    }
+    
+    .sns_inner .sns_con a:last-child{
+        float:right;
+    }
+
+    .sns_inner .sns_con a div{
+        width:56.684%;
+        padding:41px 23px 0 35px;
+    }
+    
+    .sns_inner .sns_con a div h3{
+        height:43px;
+        line-height: 43px;
+        background:url(../img/cjw-sns-blog.png) no-repeat right center;
+        background-size:auto 100%;
+        font-size:2.1rem;
+    }
+
+    .sns_inner .sns_con a div p{
+        position: absolute;
+        left:35px;
+        bottom:38px;
+        font-size:2.5rem;
+        line-height: 1.12;
+    }
+
+     /* footer - mobile */
+
+    footer{
+        background-color:#fbfbfb;
+        border-top:none;
+    }
+
+    .link_wrap{
+        width:840px;
+        margin:0 auto;
+    }
+    .link_wrap>a{
+        float:right;
+        width:100px;
+        height: 96px;
+        line-height: 96px;
+        padding-left:0;
+        border-bottom: none;
+        font-size:1.8rem;
+        color:#02b5d6;
+    }
+    .link_wrap .f_menu{
+        width: calc(740px-100px);
+        display: inline-block;
+    }
+    .link_wrap .f_menu li{
+        float:none;
+        width:auto;
+        display: inline-block;
+    }
+    
+    .link_wrap .f_menu li:nth-child(odd){
+        width:auto;
+    }
+    
+    .link_wrap .f_menu li:after{
+        content:'|';
+        font-size:1.8rem;
+        color:#000;
+        margin:0 19px;
+    }
+    
+    .link_wrap .f_menu li.mobile{
+        display: none;
+    }
+    .link_wrap .f_menu li a{
+        display: inline-block;
+        height:96px;
+        line-height: 96px;
+        border-bottom:none;
+        padding-left:0;
+        font-size:1.8rem;
+        color:#000;
+    }
+
+    .link_wrap .f_menu li:nth-child(even) a{
+        border-left:none;
+        padding-left:0;
+    }
+
+    .copy_wrap{
+        width:82.031%;
+        height:200px;
+        margin:0 auto;
+        position: relative;
+        border-top:2px solid #e5e5e5;
+    }
+    .copy_wrap>span{
+         position: absolute;
+         right:0;
+         top:50%;
+         transform: translateY(-50%);
+    }
+    .copy_wrap>span a{
+        float:right;
+        width: 81px;
+        height: 86px;
+        line-height:1;
+        border-bottom:none;
+        font-size:1.2rem;
+        color:#666;
+        padding-left:0;
+    }
+    .copy_wrap>span a:last-child{
+        border-left:none;
+        width:63px;
+        padding-left: 0;
+        font-size:0;
+        margin-right:22px;
+    }
+
+    .copy_wrap>span a:before{
+        content:'';
+        display: block;
+        width:63px;
+        height: 62px;
+        background:url(../img/cjw-logo-ccm.png) no-repeat center/contain;
+        margin-bottom: 10px;
+        margin-left: 8px;
+    }
+
+    .copy_wrap>span a:last-child:before{
+        background-image: url(../img/cjw-logo-wa.png);
+        width:63px;
+        height:86px;
+        margin-left: 0;
+    }
+
+    .copy_wrap .copy{
+        padding:53px 0;
+        height:100%;
+        text-align: left;
+        position: relative;
+    }
+    .copy_wrap .copy>span{
+        position: absolute;
+        left:0;
+        top:50%;
+        transform: translateY(-50%);
+        display: inline-block;
+        width: 65px;
+        margin-bottom:0;
+    }
+    .copy_wrap .copy>span img{
+        width: 100%;
+    }
+    .copy_wrap .copy p{
+        width:62.857%;
+        margin-left: 93px;
+        margin-bottom: 14px;
+}
+
+    .copy_wrap .copy p:first-of-type{
+        font-size:0;
+    }
+
+    .copy_wrap .copy p:last-child{
+        height:auto;
+        line-height: 1;
+        font-size:1.4rem;
+        color:#666;
+        background-color:transparent;
+        margin-top: 0;
+    }
+    .copy_wrap .copy p span{
+        font-size:1.2rem;
+        color:#666;
+        line-height: 1.8;
+    }
+
+    .copy_wrap .copy p span:first-child:after{
+        content:"|";
+        font-size:1.2rem;
+        color:#666;
+        margin:0 11px;
+    }
+
+    .copy_wrap .copy p span:nth-child(2):after{
+        content:"|";
+        font-size:1.2rem;
+        color:#666;
+        margin:0 11px;
+    }
+
+
+    .copy_wrap .copy p span:nth-child(3):after{
+        content:"|";
+        font-size:1.2rem;
+        color:#666;
+        margin:0 11px;
+    }
+
+
+    .copy_wrap .copy p span:last-child{
+        display: block;
+    }
+
+    .copy_wrap .copy p span a{
+        color:#666;
+    }
+    /* end mobile */
+
+ 
+
+    
+}
+
+/* start 1276 */
+@media all and (min-width:1300px){
+    .pc{display: block;}
+    .mobile{display: none;}
+    .labtop{display: block;}
+ 
+    .wrap{
+        overflow-x: hidden;
+    }
+    header{
+        width:1276px;
+        margin:0 auto;
+        position:static;
+        height:188px;
+    }
+    
+    header.on{
+        position: fixed;
+        height:100px;
+        width: 100%;
+    }
+
+    .logo{
+        left:-9999px;
+    }
+    
+    .header_top{
+        width:1276px;
+        margin:0 auto;
+        height:67px;
+    }
+    
+    header.on .header_top{
+        display: none;
+    }
+    
+    .sch_wrap{
+        float:left;
+        margin-top: 23px;
+        position: relative;
+    }
+
+    .sch_form{
+        display: block;
+        position: static;
+        width:auto;
+        height:auto;
+    }
+
+    .sch_form input{
+        width:185px;
+        height:28px;
+        line-height: 28px;
+        border:none;
+        border-bottom: 1px solid #969696;
+        border-radius:0;
+        background-color:transparent;
+        padding-left: 10px;
+        margin:0;
+        font-size:1.6rem;
+    }
+
+    .sch_form .btn_sch{
+        position: absolute;
+        width:18px;
+        height:18px;
+        right:0;
+        bottom:10px;
+        border-radius: 0;
+        background:url(../img/cjw-icon-search1.png) no-repeat;
+        background-size:contain;
+    }
+    
+    .t_menu{
+        float:right;
+        margin-top: 28px;
+    }
+    
+    .t_menu li{
+        float:left;
+    }
+    .t_menu li:before{
+        content: "|";
+        font-size:1.6rem;
+        color:#808080;
+        margin:0 17px;
+    }
+    
+    .t_menu li:first-child:before{
+        display: none;
+    }
+    
+    .t_menu li a{
+        font-size:1.6rem;
+        color:#808080;
+    }
+    
+    .t_menu li:first-child a{
+        color:#02b5d6;
+    }
+
+    /* nav 영역 */
+
+    #navWrap{
+        display: block;
+        position: static;
+        height: auto;
+        background-color:#fff;
+        border-top:1px solid #cfcfcf;
+    }
+    
+    .nav_inner{
+        position: static;
+        width:1276px;
+        height:121px;
+        background-color:#fff;
+        padding-top:0;
+        overflow: visible;
+        margin:0 auto;
+    }
+
+    .nav_inner>div{
+        float:left;
+        width:auto;
+        margin-left:0;
+        margin-bottom:0;
+    }
+
+    .nav_inner>div a:nth-child(1){
+        width:185px;
+        height:65px;
+        margin-top: 26px;
+    }
+    
+    header.on .nav_inner>div a:nth-child(1){
+        width:140px;
+        height: 48px;
+        margin-top: 28px;
+    }
+
+    .nav_inner .gnb{
+        float:right;
+        width:auto;
+        margin-left:0;
+        margin-top:41px;
+        border-top:none;
+    }
+    
+    header.on .nav_inner .gnb{
+        margin-top: 30px;
+    }
+    
+    .nav_inner .gnb>li{
+        float:left;
+    }
+    
+    .nav_inner .gnb>li:before{
+        content:'|';
+        font-size:2.2rem;
+        color:#000;
+        margin:0 30px;
+    }
+    
+    header.on .nav_inner .gnb>li:before{
+        font-size:2.0rem;
+    }
+    
+    .nav_inner .gnb>li:first-child:before{
+        display: none;
+    }
+
+    .nav_inner .gnb>li>a{
+        display: inline-block;
+        position: relative;
+        height:56px;
+        line-height: 56px;
+        border-bottom:none;
+        padding-left: 0;
+        font-size:2.2rem;
+        color:#000;
+    }
+    
+    header.on .nav_inner .gnb>li>a{
+        height:50px;
+        line-height: 50px;
+        font-size:2.0rem;
+    }
+    
+    .nav_inner .gnb>li>a:hover,
+    .nav_inner .gnb>li>a:focus{
+        color:#2fb7e6;
+        font-weight: bold;
+    }
+
+    .nav_inner .gnb>li:last-child.open>a{
+        border-bottom: none;
+    }
+    
+    .nav_inner .gnb>li>a span{
+        display:none;
+    }
+
+    .nav_inner .gnb>li.open>a span{
+        display: block;
+        position: absolute;
+        right:50%;
+        top:auto;
+        bottom:-38px;
+        margin-right:-13px;
+        transform: translateY(0);
+        background-image: url(../img/cjw-arrow-nav-bottom-fill.png);
+        width:25px;
+        height:14px;
+        z-index: 10;
+    }
+    .nav_inner .open .sub_wrap{
+        position: absolute;
+        left:0;
+        top:188px;
+        width: 100%;
+        display: block;
+        border-bottom:none;
+        border-top:1px solid #cfcfcf;
+        background-color:#fff;
+    }
+    
+    header.on .nav_inner .open .sub_wrap{
+        top:70px;
+    }
+
+    .nav_inner .sub_inner{
+        width: 1274px;
+        margin:0 auto;
+    }
+
+    .nav_inner .sub_inner_con{
+        height:310px;
+        margin-left: 323px;
+    }
+
+    .nav_inner .left{
+        float:left;
+        width:466px;
+        height:100%;
+        border-right:1px solid #cfcfcf;
+        margin:10px 0;
+        padding-top: 44px;
+    }
+
+    .nav_inner .left ul{
+        background-color:transparent;
+        float:left;
+        width: 50%;
+    }
+    .nav_inner li:first-child ul{
+        width: 33.333%;
+    }
+
+    .nav_inner .left ul li{
+        width:auto;
+        margin-left: 0;
+        margin-bottom: 28px;
+    }
+
+    .nav_inner .left ul li a{
+        display: block;
+        height:auto;
+        line-height: 1;
+        border-bottom: none;
+        padding-left:0;
+        font-size:2rem;
+        color:#000;
+    }
+
+    .nav_inner .left ul:last-child li:last-child a{
+        border-bottom: none;
+    }
+
+    .nav_inner .right{
+        float:left;
+        width:426px;
+        height:100%;
+        background:url(../img/cjw-bg-nav-brandStory.jpg) no-repeat right bottom;
+        padding:52px 0 0 35px;
+    }
+    
+    .nav_inner li:nth-child(2) .right{}
+    
+    .nav_inner .right h3{
+        font-size:3.4rem;
+        font-weight: normal;
+        color:#000;
+    }
+    
+    .nav_inner .right a{
+        display: block;
+        width: 110px;
+        height: 46px;
+        line-height: 42px;
+        border:2px solid #cfcfcf;
+        margin-top: 25px;
+        text-align: center;
+        font-size:1.4rem;
+        color:#343434;
+    }
+    
+    .nav_inner .right a:after{
+        content:'';
+        display: inline-block;
+        background:url(../img/cjw-plus-story-blue.png) no-repeat;
+        background-size:contain;
+        width: 12px;
+        height: 12px;
+        margin-left: 20px;
+    }
+
+    .nav_inner>a{
+       display: none;
+    }
+    
+    /* visual */
+
+    #visual{
+        margin-top: 0;  
+        position: relative;
+    }
+    
+    header.on +#visual{
+        margin-top:121px;
+    }
+
+    .img_wrap{
+        text-align: center;
+        height:950px;
+        background:url(../img/cjw-bg-main.jpg) no-repeat center/cover;
+        padding-top: 229px;
+        color:#fff;
+    }
+
+    .img_wrap>span{
+        font-size:5.6rem;
+    }
+    
+    .img_wrap h2{
+        font-family: "nbg","돋움",dotum,sans-serif;
+        font-size:12rem;
+        font-weight: normal;
+        margin-top: 27px;
+        margin-bottom: 46px;
+    }
+
+    .img_wrap p{
+        width:1276px;
+        line-height: 1.3;
+        font-size:3.0rem;
+        margin: 0 auto 67px;
+    }
+
+    .img_wrap p span{
+        display: block;
+    }
+    
+
+    .img_wrap a{
+        display: inline-block;
+        width:23.511%;
+        height:80px;
+        line-height: 76px;
+        font-size:2.5rem;
+        color:#fff;
+        border:2px solid rgba(255,255,255,0.6);
+        border-radius: 3px;
+        background-color:rgba(0,0,0,0.4);
+    }
+    
+    .img_wrap>a.arrow{
+        border:none;
+        cursor: pointer;
+        position: absolute;
+        top:50%;
+        transform: translateY(-50%);
+        width:56px;
+        height:70px;
+        background:url(../img/cjw-arrow-slider-left.png) no-repeat;
+        background-size:contain;
+    }
+    
+    .img_wrap>a.left{
+        left:70px;
+    }
+    
+    .img_wrap>a.right{
+        background-image: url(../img/cjw-arrow-slider-right.png);
+        right:70px;
+    }
+    
+    .img_wrap .labtop{display: block;}
+    
+    .img_wrap .bot_img{
+        border:none;
+        cursor: pointer;
+        position: absolute;
+        left:50%;
+        transform: translateX(-50%);
+        bottom:52px;
+        width: 33px;
+        height: 76px;
+        background:url(../img/cjw-icon-mouse.png) no-repeat;
+        background-size:contain;
+    }
+    
+    
+    /* story */
+
+    #mainContents{}
+
+    #story{
+        background-color:#f8f8f8;
+        padding:155px 0 195px;
+        background:url(../img/cjw-bg-product.png) no-repeat bottom/contain;
+        position: relative;
+    }
+    
+    .story_inner{
+        width:1276px;
+        margin:0 auto;
+    }
+
+    .story_inner>div{
+        float:left;
+        width:calc((100% - 112px)/3);
+        height:500px;
+        margin-right: 56px;
+        border-width: 3px;
+        border-radius: 6px;
+        padding:33px 26px;
+        background:url(../img/cjw-bg-smart.jpg) no-repeat right bottom #fff;
+        background-size:350px;
+    }
+    
+    .story_inner>div:last-child{
+        margin-right: 0;
+    }
+
+    .story_inner>div.fresh{
+        background-image: url(../img/cjw-bg-fresh.jpg);
+        border-color:#01b5d6;
+        background-size:380px;
+        margin-right: 56px;
+    }
+
+    .story_inner>div.classic{
+        background-image: url(../img/cjw-bg-classic.jpg);
+        border-color:#ef4665;
+        background-size:290px;
+    }
+
+    .story_inner>div{
+        display: block;
+    }
+
+    .story_inner>div.smart{
+        display: block;
+    }
+    
+    .story_inner>div>span{
+        display: block;
+        width:62px;
+        height:22px;
+        background:url(../img/cjw-logo-smart.png) no-repeat 0 1px;
+        background-size:100%;
+        margin-bottom: 34px;
+    }
+
+    .story_inner>div.fresh>span{
+        background-image: url(../img/cjw-logo-fresh.png);
+        background-position: 0 0;
+        height:24px;
+    }
+
+    .story_inner>div.classic>span{
+        background-image: url(../img/cjw-logo-classic.png);
+    }
+
+
+    .story_inner>div strong{
+        font-size:3.5rem;
+        color:#343434;
+        line-height: 1.114;
+    }
+
+    .story_inner>div strong>span{
+        display: inline-block;
+        margin-left: 5px;
+    }
+    
+    .story_inner>div.fresh strong>span,
+    .story_inner>div.classic strong>span{
+        display: block;
+        margin-left: 0;
+    }
+
+    .story_inner>div p{
+        font-size:1.5rem;
+        line-height: 1.267;
+        color:#343434;
+        margin:15px 0 18px;
+    }
+
+    .story_inner>div a{
+        display: block;
+        width:152px;
+        height:46px;
+        line-height: 41px;
+        text-align: center;
+        font-size:1.4rem;
+        color:#343434;
+        border:2px solid #cfcfcf;
+        background-color:#fff;
+        padding: 0;
+    }
+
+    .story_inner>div a:after{
+        content:'';
+        display: inline-block;
+        width:13px;
+        height:13px;
+        background:url(../img/cjw-plus-story-orange.png) no-repeat;
+        background-size:contain;
+        margin-left: 11px;
+        vertical-align: -1;
+    }
+
+    .story_inner>div.fresh a:after{
+        background-image: url(../img/cjw-plus-story-blue.png);
+    }
+
+    .story_inner>div.classic a:after{
+        background-image: url(../img/cjw-plus-story-red.png);
+    }
+    
+    #story>.arrow{
+        position: absolute;
+        top:50%;
+        transform: translateY(-50%);
+        width:37px;
+        height:69px;
+        background-size:contain;
+    }
+    
+    #story>.left{
+        left:72px;
+        background-image: url(../img/cjw-arrow-slider-left-grey.png);
+    }
+    
+    #story>.right{
+        right:72px;
+        background-image: url(../img/cjw-arrow-slider-right-grey.png);
+    }
+    
+     /* cast 영역 */
+
+    #cast{
+        padding:184px 0 0;
+        background:url(../img/cjw-bg-foodCast.jpg) no-repeat center/cover;
+    }
+    
+    .cast_inner{
+        width:1276px;
+        margin:0 auto;
+    }
+
+    .cast_inner .title{
+        float:left;
+        width:655px;
+        height:299px;
+        background:none;
+        padding-top:7px;
+        margin-bottom:0;
+        text-align: left;
+    }
+
+    .cast_inner .title h2{
+        font-size:8.0rem;
+        margin-bottom: 34px;
+    }
+
+    .cast_inner .title a{
+        display:inline-block;
+        width:330px;
+        height: 80px;
+        line-height: 76px;
+        font-size:2.2rem;
+        text-align: center;
+    }
+
+    .cast_inner .title a:after{
+        width:20px;
+        height:19px;
+        margin-left: 31px;
+        vertical-align: -1px;
+    }
+
+    .cast_inner .section_slider{
+        float:right;
+        width:621px;
+        height:898px;
+        margin:0;
+        padding:0;
+        background-color:#fff;
+        border:2px solid #fff;
+        border-radius:5px 5px 0 0;
+    }
+
+    .cast_inner .section_slider>div>span{
+        height:598px;
+    }
+
+    .cast_inner .section_slider>div a{
+        padding:42px 30px 0;
+    }
+    
+    .cast_inner .section_slider>div a h3{
+        font-size:3.4rem;
+        font-weight: normal;
+        color:#000;
+    }
+    
+    .cast_inner .section_slider>div a h3:after{
+        content:'';
+        display: block;
+        width: 60px;
+        height:3px;
+        background-color:rgba(0,181,216,.5);
+        margin:16px auto 17px;
+    }
+
+    .cast_inner .section_slider>div a strong{
+        font-size:2.0rem;
+        color:#000;
+    }
+    
+    .cast_inner .section_slider>div a p{
+        font-size:1.6rem;
+        color:#909090;
+        line-height: 1.25;
+        margin:11px 0 26px;
+    } 
+    
+    .cast_inner .section_slider>div a>span{
+        display: inline-block;
+        width: 150px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 2px;
+        background-color:#00b5d8;
+        text-align: center;
+        font-size:1.6rem;
+        color:#fff;
+    }
+    
+    .cast_inner .banner{
+        float:left;
+        width:327px;
+        height:299px;
+        background:none;
+        background-color:#fff;
+        border-radius:0;
+        margin:0;
+        padding:55px 57px 0;
+        text-align: center;
+
+    }
+    
+    .cast_inner .banner+.banner{
+        width:327px;
+        padding: 0;
+        background: url(../img/cjw-img-foodLab.jpg) no-repeat center/cover;
+    }
+    
+    
+    .cast_inner .banner+.banner.labtop{
+        display: block;
+    }
+
+    .cast_inner .banner:last-child{
+        width:327px;
+        height: 300px;
+        padding:43px 34px 0;
+        border-radius: 0;
+        background-image:none;
+        background-color:#02b5d6;
+        margin-left: 327px;
+    }
+
+    .cast_inner .banner h3{
+        font-size:3.4rem;
+        margin-bottom:0;
+    }
+    
+    .cast_inner .banner:last-child h3{
+        color:#fff;
+    }
+    
+    .cast_inner .banner h3:after{
+        content:'';
+        display: block;
+        width: 60px;
+        height:3px;
+        margin:16px auto 9px;
+        background-color:#02b5d6;    
+    }
+    
+    .cast_inner .banner:last-child h3:after{
+        background-color:rgba(255,255,255,.7);
+    }
+    
+    .cast_inner .banner p{
+        font-size:1.8rem;
+        line-height: 1.278;
+        color:#000;
+        margin-bottom: 18px;
+    }
+    
+    .cast_inner .banner:last-child p{
+        color:#fff;
+        margin-bottom: 40px;
+    }
+
+    .cast_inner .banner p span{
+        display: block;
+    }
+
+    .cast_inner .banner>span{
+        position: static;
+        display: block;
+        margin:0 auto;
+        transform: translateY(0);
+        background:none;
+        background-color:#00b5d8;
+        width:150px;
+        height:40px;
+        line-height: 40px;
+        border-radius: 2px;
+        text-align: center;
+        font-size:1.6rem;
+        color:#fff;
+        text-indent:0;
+        overflow: visible;
+    }
+    
+    .cast_inner .banner:last-child>span{
+        background-color:#fff;
+        color:#000;
+    }
+    
+    /* knowhow*/
+    #knowhow{
+        padding:0;
+        padding-bottom: 134px;
+        background: url(../img/cjw-bg-foodKnowhow.jpg) no-repeat left bottom;
+        background-size:38.46%;
+      
+    }
+    
+    .knowhow_inner{
+        width:1276px;
+        margin:0 auto;
+    }
+
+    .knowhow_inner .title{
+        float:right;  
+        width:949px;
+        height:299px;
+        padding-top:0;
+        margin-bottom:0;
+        background:url(../img/cjw-bg-foodCast.jpg) no-repeat left -532px bottom -19px/182%;
+        text-align: right;
+        padding:56px 0 0 64px;
+    }
+
+    .knowhow_inner h2{
+        margin-bottom:0;
+        color:#fff;
+        font-size:8.0rem;
+        font-weight: normal;
+        margin-bottom: 34px;
+    }
+
+    .knowhow_inner .title a{
+        display: inline-block;
+        width:330px;
+        height: 80px;
+        border:none;
+        border:2px solid rgba(255,255,255,0.4);
+        background:rgba(0,0,0,0.4);
+        color:#fff;
+        font-size:2.2rem;
+        line-height: 76px;
+        text-align: center;
+        
+    }
+    .knowhow_inner .title a:after{
+        width: 19px;
+        height: 21px;
+        margin-left:33px;
+    }
+    .knowhow_inner .section_slider{
+        float:right;
+        width: 949px;
+        height:299px;
+        padding:0;
+        margin:0;
+        border:none;
+        border-radius:0;
+        background:#fff;
+    }
+
+    .knowhow_inner .section_slider>div{}
+    .knowhow_inner .section_slider div>span{
+        float:right;
+        width:622px;
+        height: 299px;
+    }
+
+    .knowhow_inner .section_slider div a{
+        float:left;
+        width:327px;
+        display: block;
+        padding:40px 26px 0 35px;
+    }
+    
+    .knowhow_inner .section_slider div a b{
+        text-align: left;
+        display: block;
+        margin-bottom: 22px;
+        color:#fcb54d;
+        font-size:1.8rem;
+        
+    }
+    .knowhow_inner .section_slider div a b.mobile{
+        display: none;
+    }
+    
+    .knowhow_inner .section_slider div a h3{
+        font-size:3.4rem;
+        color:#000;
+        font-weight: normal;
+    }
+    .knowhow_inner .section_slider div a>span{
+        display: block;
+        margin:0 auto;
+        width: 150px;
+        height: 40px;
+        line-height: 40px;
+        background-color: #fbb54d;
+        color:#fff;
+        font-size:1.6rem;
+        
+    }
+    
+    .knowhow_inner .section_slider div a h3:after{
+        content:'';
+        display: block;
+        width:60px;
+        height:3px;
+        background-color:#fadeaf;
+        margin:16px auto 15px;
+    }
+
+    .knowhow_inner .section_slider div strong{
+        display: inline-block;
+        margin-bottom: 35px;
+        color:#000;
+        font-size:1.8rem;
+        line-height: 1.28;
+    }
+    
+    .knowhow_inner .section_slider div strong>span{
+        display: block;
+    }
+
+    .knowhow_inner .banner{
+        float:right;
+        display: block;
+        width: 39.595%;
+        height:248px;
+        border-radius:0;
+        background:none;
+        background-color: #76d9c5;
+        margin:0;
+        padding:42px 15px 0;
+    }
+    .knowhow_inner>a.banner{
+        float:left;
+        width:639px;
+        height: 299px;
+        margin-right: 0;
+        margin-left: 327px;
+        padding:62px 35px 0 ;
+        background:url(../img/cjw-icon-cjwRecipe.png) no-repeat right 56px center #76d9c5;
+        background-size:224px;
+    }
+    .knowhow_inner>a.banner+a.banner{
+        float:right;
+        width:310px;
+        height:299px;
+        margin-left: 0;
+        background:url(../img/cjw-img-cjwRecipe.jpg) no-repeat center/cover;
+    }
+    
+    .knowhow_inner .banner.labtop{
+        display: block;
+    }
+
+    .knowhow_inner .banner:after{
+        content:'';
+        background:none;
+        width: 16px;
+        height: 29px;
+        position: absolute;
+        right:12px;
+        top:50%;
+        margin-top: -15px;
+    }
+    
+    .knowhow_inner .banner h3{
+        font-size:3.4rem;
+        width:266px;
+        color:#000;
+        font-weight: normal;
+        text-align: center;
+    }
+    
+    .knowhow_inner .banner h3:after{
+        content:'';
+        display: block;
+        width:60px;
+        height:3px;
+        background-color:#d6f4ee;
+        margin:17px auto 18px;
+    }
+    
+    .knowhow_inner .banner>p{
+        margin-bottom: 13px;
+        width:266px;
+        text-align: center;
+        color:#000;
+        line-height: 1.278;
+        font-size:1.8rem;
+    }
+    
+    .knowhow_inner .banner span{
+        display: block;
+        margin-left:61px;
+        width: 150px;
+        height: 40px;
+        line-height: 40px;
+        background-color: #fff;
+        color:#000;
+        font-size:1.6rem;
+        text-align: center;
+    }
+    
+    .knowhow_inner .bannerWrap{
+        float:left;
+        width:327px;
+        height:598px;
+        margin-top: -897px;
+    }
+
+    .knowhow_inner .bannerWrap .banner{
+        width: 100%;
+        height:150px;
+        margin-bottom: 0;
+        background-image: none;
+        background-color:#f4cb4d;
+        padding:40px 20px 0;
+    }
+    
+    .knowhow_inner .bannerWrap .banner.pc{
+        display: block;
+    }
+    
+    .knowhow_inner .bannerWrap .banner:after{
+        content:'';
+        position: absolute;
+        right:21px;
+        top:50%;
+        transform: translateY(-50%);
+        margin-top: 0;
+        width: 25px;
+        height: 47px;
+        background:url(../img/cjw-arrow-section-right.png) no-repeat;
+        background-size:contain;
+    }
+    
+    .knowhow_inner .bannerWrap .banner p{
+        text-align: left;
+        font-size:1.6rem;
+        color:#2f2f2f;
+        margin-bottom: 13px;
+    }
+    
+    .knowhow_inner .bannerWrap .banner h3{
+        font-size:3.5rem;
+        text-align: left;
+        margin-bottom: 0;
+    }
+    
+    .knowhow_inner .bannerWrap .banner h3:after{content:none;}
+
+    .knowhow_inner .bannerWrap>a span.line{
+        display: block;
+        width:100%;
+        height:1px;
+        background-color:#fff;
+        margin-top: 42px;
+        margin-left: 0;
+    } 
+    
+    .knowhow_inner .bannerWrap>a:last-child span.line{
+        display: none;
+    }
+    
+     /* friends */
+
+    #friends{
+        padding:155px 0 118px;
+        background:url(../img/cjw-bg-friends.jpg) no-repeat center/cover;
+    }
+    
+    .friends_inner{
+        width:1276px; 
+        margin:0 auto;
+    }
+
+    .friends_inner .title{
+        float:none;
+        display: block;
+        width:637px;
+        height: 299px;
+        background:none;
+        text-align:left;
+        padding-top: 5px;
+        margin-bottom:0;
+    }
+
+    .friends_inner .title h2{
+        font-size:8.0rem;
+        color:#fff;
+        font-weight: normal;
+        margin-bottom: 45px;
+    }
+
+    .friends_inner .title a{
+        display: inline-block;
+        width: 330px;
+        height: 80px;
+        line-height: 76px;
+        border:2px solid rgba(255,255,255,0.6);  
+        border-radius: 2px;
+        font-size:2.2rem;
+        color:#fff;
+        text-align: center;
+    }
+
+    .friends_inner .title a:after{
+        width: 19px;
+        height: 21px;
+        margin-left: 32px;
+    }
+
+    .friends_inner .banner{
+        float:right;
+        display: block;
+        width:38.737%;
+        margin:0;
+        position: relative;
+    }
+
+    .friends_inner .friends_b{
+        float:left;
+        width:637px;
+        height:598px;
+        overflow: hidden;
+        padding:36px 31px;
+        background-color:#f4cb4d;
+        color:#000;
+    }
+    .friends_inner .friends_b .bg{
+        position: absolute;
+        right:25px;
+        bottom:32px;
+        width: 224px;
+        height: 231px;
+        background:url(../img/cjw-icon-foodBox.png) no-repeat;
+        background-size:contain;
+    }
+    
+    .friends_inner .friends_b b{
+        font-size:1.8rem;
+        color:#fff;
+        margin-bottom: 19px;
+    }
+
+    .friends_inner .friends_b strong{
+        font-size:4.5rem;
+        line-height: 1.111;
+        font-weight: normal;
+    }
+
+    .friends_inner .friends_b .line{
+        display: block;
+        width:343px;
+        height: 2px;
+        margin:28px 0 25px;
+        background-color:rgba(255,255,255,.5);
+    }
+
+    .friends_inner .friends_b p{
+        margin-bottom: 23px;
+        font-size:2.2rem;
+        line-height: 1.182;
+    }
+
+    .friends_inner .friends_b span:last-child{
+        display: block;
+        width: 150px;
+        height: 40px;
+        line-height: 36px;
+        border-color:rgba(255,255,255,0.5);
+        background:#fff;
+        font-size:1.6rem;
+        text-align: center;
+    }
+
+    .friends_inner .banner:nth-of-type(2){
+        width:639px;
+        height:299px;
+        padding:35px 44px;
+        background:url(../img/cjw-icon-friendsPanel.png) no-repeat right 45px center #01b5d5;
+        background-size:220px;
+        margin-top: -300px;
+        margin-bottom: 0;
+        background-color:#00b5d8;
+        color:#fff;
+        text-align: center;
+    }
+
+    .friends_inner .banner:nth-of-type(2) h3{
+        text-align: left;
+        margin-bottom: 22px;
+        font-size:1.8rem;
+        font-weight: normal;
+        color:rgba(255,255,255,0.7);
+    }
+
+    .friends_inner .banner:nth-of-type(2) p{
+        font-size:2.2rem;
+        line-height: 1.136;
+        text-align: left;
+        width:258px;
+        margin-bottom: 55px;
+    }
+    
+    .friends_inner .banner:nth-of-type(2) span{
+        display: block;
+        width: 150px;
+        height:40px;
+        line-height: 40px;
+        border-radius: 2px;
+        font-size:1.6rem;
+        background-color:#fff;
+        color:#000;
+    }
+    
+
+    .friends_inner .banner:after{
+         content:none;
+    }
+    
+       
+    .friends_inner .friends_b:after{
+        content:none;
+    }
+
+
+    .friends_inner .box{
+       float:left;
+       width:639px;
+       height:598px;
+       margin:0;
+    }
+
+
+    .friends_inner .bannerBox{
+        float:none;
+        display: block;
+        width: 327px;
+        height:299px;
+        padding-top:48px;
+        border:none;
+        background:#fff;
+        text-align: center;
+    }
+
+    .friends_inner .bannerBox:nth-child(2){
+        width:312px;
+        float:right;
+        border:none;
+    }
+    .friends_inner .bannerBox:last-child{
+        float:left;
+        width:327px;
+        background:url(../img/cjw-img-foodEditor.jpg) no-repeat center/cover;
+    }
+
+    .friends_inner .bannerBox h3{
+        padding-top: 149px;
+        background:url(../img/cjw-icon-foodEditor.png) no-repeat top center;
+        background-size:130px;
+        color:#000;
+        font-size:2.8rem;
+        font-weight: normal;
+        margin-bottom: 8px;
+    }
+    
+    .friends_inner .bannerBox p{
+        font-size:1.6rem;
+        line-height: 1.1875;
+        color:#000;
+    }
+
+    .friends_inner .bannerBox:nth-child(2) h3{
+        background-image: url(../img/cjw-icon-meetingTalk.png);
+        background-position: center 5px;
+        background-size:126px;
+    }
+    
+    .friends_inner .bannerBox:last-child{
+        display: block;
+    }
+    
+        /* SNS */
+
+    #sns{
+        padding:154px 0 146px;
+        background:url(../img/cjw-bg-sns1.png),url(../img/cjw-bg-sns2.png);
+        background-repeat:no-repeat,no-repeat;
+        background-position: right -53px top -74px,left -61px bottom -100px;
+        background-size:398px,618px;
+    }
+
+    .sns_inner{
+        width:1276px;
+        margin:0 auto;
+    }
+
+    .sns_inner .title{
+        width:637px;
+        margin-bottom:59px;
+        text-align: left;
+    }
+
+    .sns_inner .title h2{
+        font-size:8.0rem;
+        margin-bottom: 44px;
+    }
+
+    .sns_inner .title p{
+        font-size:2.9rem;
+    }
+
+    .sns_inner .sns_link{
+        width:637px;
+        margin:0;
+    }
+
+    .sns_link ul{}
+
+    .sns_link ul li{
+        float:left;
+        width:48px;
+        margin-right: 18px;
+    }
+
+    .sns_link ul li:last-child{
+        width:48px;
+    }
+
+    .sns_link ul li a{
+        width: 48px;
+        height: 48px;
+    }
+    
+    .sns_notice{
+        float:right;
+        width:639px;
+        height:300px;
+        background-color:#f7f7f7;
+        padding:42px 40px 0 38px;
+        margin-top: -264px;
+    }
+    
+    .sns_notice h3{
+        font-size:1.8rem;
+        color:#000;
+        height:50px;
+        position: relative;
+        border-bottom: 1px solid #cfcfcf;
+    }
+    
+    .sns_notice h3:after{
+        content:'';
+        position: absolute;
+        right:0;
+        top:0;
+        width:31px;
+        height: 31px;
+        background:url(../img/cjw-plus-section-grey.png) no-repeat;
+        background-size: contain;
+        vertical-align: middle;
+    }
+    
+    .sns_notice ul{
+        margin-top: 20px;
+    }
+    
+    .sns_notice li{
+        width: 100%;
+        margin-bottom: 27px;
+        list-style: disc;
+        margin-left: 13px;
+        
+    }
+    
+    .sns_notice li:marker{
+        margin-left: 10px;
+    }
+    
+    .sns_notice li a{
+        display: block;
+        font-size:2.0rem;
+        color:#494949;
+        
+    }
+    
+    .sns_notice li>a span{
+        float:right;
+        width:331px;
+        font-size:2.0rem;
+        color:#787878;
+        margin-right:60px;
+    }
+
+    .sns_inner .sns_con{
+        float:left;
+        width:100%;
+        margin:0 auto;
+    }
+
+    .sns_inner .sns_con a{
+        float:left;
+        display: block;
+        width:50%;
+        height:250px;
+    }
+    
+    .sns_inner .sns_con a span{
+        width:327px;
+    }
+    
+    .sns_inner .sns_con a:last-child{
+        float:right;
+    }
+    
+    .sns_inner .sns_con a div{
+        width:307px;
+        padding:41px 17px 0 22px;
+    }
+    
+    .sns_inner .sns_con a div h3{
+        height:32px;
+        line-height: 32px;
+        background:url(../img/cjw-sns-blog.png) no-repeat right center;
+        background-size:auto 100%;
+        font-size:1.8rem;
+    }
+
+    .sns_inner .sns_con a div p{
+        position: absolute;
+        left:20px;
+        bottom:35px;
+        font-size:2.0rem;
+        line-height: 1.25;
+    }
+    
+     .sns_inner .sns_con a:last-child span{
+        float:left;
+         border-right:2px solid #fff;
+    }
+    
+    .sns_inner .sns_con a:last-child div{
+        border-right:0;
+        border-left:2px solid #fff;
+    }
+    
+    
+     /* footer - mobile */
+
+    footer{
+        background-color:#fbfbfb;
+        border-top:2px solid #e2e2e2;
+    }
+
+    .link_wrap{
+        width:1276px;
+        margin:0 auto;
+        position: relative;
+    }
+    .link_wrap>a{
+        float:right;
+        margin-right: 430px;
+        width:100px;
+        height: 96px;
+        line-height: 96px;
+        padding-left:0;
+        border-bottom: none;
+        font-size:1.8rem;
+        color:#02b5d6;
+    }
+    .link_wrap .f_menu{
+        width: calc(740px-100px);
+        float:left;
+    }
+    .link_wrap .f_menu li{
+        float:none;
+        width:auto;
+        display: inline-block;
+    }
+    
+    .link_wrap .f_menu li:nth-child(odd){
+        width:auto;
+    }
+    
+    .link_wrap .f_menu li:after{
+        content:'|';
+        font-size:1.8rem;
+        color:#000;
+        margin:0 19px;
+    }
+    
+    .link_wrap .f_menu li.mobile{
+        display: none;
+    }
+    .link_wrap .f_menu li a{
+        display: inline-block;
+        height:96px;
+        line-height: 96px;
+        border-bottom:none;
+        padding-left:0;
+        font-size:1.8rem;
+        color:#000;
+    }
+
+    .link_wrap .f_menu li:nth-child(even) a{
+        border-left:none;
+        padding-left:0;
+    }
+    
+    .link_wrap .f_sns{
+        position: absolute;
+        right:0;
+        top:0;
+        width:294px;
+        height:96px;
+        line-height: 96px;
+    }
+    
+    .link_wrap .f_sns li{
+        float:left;
+        margin-right: 19px;
+    }
+    
+    .link_wrap .f_sns li:last-child{
+        margin-right: 0;
+    }
+    
+    .link_wrap .f_sns li a{
+        display: block;
+    }
+    
+    footer>span.line{
+        width: 100%;
+        height:2px;
+        background-color:#e1e1e1;
+    }
+    
+    .copy_wrap{
+        width:1276px;
+        height:200px;
+        margin:0 auto;
+        position: relative;
+        border-top:none
+    }
+    .copy_wrap>span{
+         position: absolute;
+         right:0;
+         top:33px;
+         transform: translateY(0);
+    }
+    .copy_wrap>span a{
+        float:right;
+        width: 80px;
+        height: 87px;
+        line-height:1;
+        border-bottom:none;
+        font-size:1.2rem;
+        color:#666;
+        padding-left:0;
+    }
+    .copy_wrap>span a:last-child{
+        border-left:none;
+        width:65px;
+        padding-left: 0;
+        font-size:0;
+        margin-right:44px;
+    }
+
+    .copy_wrap>span a:before{
+        content:'';
+        display: block;
+        width:63px;
+        height: 62px;
+        background:url(../img/cjw-logo-ccm.png) no-repeat center/contain;
+        margin-bottom: 10px;
+        margin-left: 8px;
+    }
+
+    .copy_wrap>span a:last-child:before{
+        background-image: url(../img/cjw-logo-wa.png);
+        width:65px;
+        height:87px;
+        margin-left: 0;
+    }
+
+    .copy_wrap .copy{
+        padding-top:42px;
+        padding-bottom: 0;
+        height:100%;
+        text-align: left;
+        position: relative;
+    }
+    .copy_wrap .copy>span{
+        position: absolute;
+        left:0;
+        top:33px;
+        transform: translateY(0);
+        display: inline-block;
+        width: 58px;
+        margin-bottom:0;
+    }
+    .copy_wrap .copy>span img{
+        width: 100%;
+    }
+    .copy_wrap .copy p{
+        width:898px;
+        margin-left: 90px;
+        margin-bottom: 17px;
+}
+
+    .copy_wrap .copy p:first-of-type{
+        font-size:0;
+    }
+
+    .copy_wrap .copy p:last-child{
+        height:auto;
+        line-height: 1;
+        font-size:1.4rem;
+        color:#666;
+        background-color:transparent;
+        margin-top: 0;
+    }
+    .copy_wrap .copy p span{
+        font-size:1.5rem;
+        color:#666;
+        line-height: 1.667;
+    }
+    
+    .copy_wrap .copy p span{
+        display:inline-block;
+    }
+
+    .copy_wrap .copy p span:first-child:after{
+        content:"|";
+        font-size:1.5rem;
+        color:#666;
+        margin:0 11px;
+    }
+
+    .copy_wrap .copy p span:nth-child(2):after{
+        content:"|";
+        font-size:1.5rem;
+        color:#666;
+        margin:0 11px;
+    }
+
+
+    .copy_wrap .copy p span:nth-child(3):after{
+        content:"|";
+        font-size:1.5rem;
+        color:#666;
+        margin:0 11px;
+    }
+
+
+    .copy_wrap .copy p span:last-child{
+        display:inline-block;
+    }
+
+    .copy_wrap .copy p span a{
+        color:#666;
+    }
+    /* end mobile */
+    
+    
+}/* end 1276 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
