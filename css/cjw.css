@@ -3799,6 +3799,7 @@ footer{
     #cast{
         padding:184px 0 0;
         background:url(../img/cjw-bg-foodCast.jpg) no-repeat center/cover;
+        background-size:1920px 1390px;
     }
     
     .cast_inner{
@@ -3905,7 +3906,17 @@ footer{
         margin:0;
         padding:55px 57px 0;
         text-align: center;
-
+        position: relative;
+    }
+    .cast_inner .banner:first-of-type:before{
+        content:'';
+        position: absolute;
+        left:-327px;
+        top:0;
+        width: 327px;
+        height:299px;
+        background:url(../img/cjw-icon-foodLab.png) no-repeat right 60px top 45px/cover #fff;
+        background-size:220px 175px;
     }
     
     .cast_inner .banner+.banner{
@@ -3927,6 +3938,17 @@ footer{
         background-image:none;
         background-color:#02b5d6;
         margin-left: 327px;
+        position: relative;
+    }
+    
+    .cast_inner .banner:last-child:before{
+        content:'';
+        position: absolute;
+        left:-650px;
+        top:0;
+        width:650px;
+        height:300px;
+        background-color:#f4f4f4;
     }
 
     .cast_inner .banner h3{
@@ -3994,7 +4016,7 @@ footer{
     #knowhow{
         padding:0;
         padding-bottom: 134px;
-        background: url(../img/cjw-bg-foodKnowhow.jpg) no-repeat left bottom;
+        background: url(../img/cjw-bg-foodKnowhow.jpg) no-repeat left bottom #f4f4f4;
         background-size:38.46%;
       
     }
@@ -4013,6 +4035,19 @@ footer{
         background:url(../img/cjw-bg-foodCast.jpg) no-repeat left -532px bottom -19px/182%;
         text-align: right;
         padding:56px 0 0 64px;
+        position: relative;
+    }
+    
+    .knowhow_inner .title:after{
+        content:'';
+        position: absolute;
+        right;0;
+        top:0;
+        width:322px;
+        height:299px;
+        background:url(../img/cjw-bg-foodCast.jpg) no-repeat right bottom/cover;
+        background-size:1920px 2500px;
+        
     }
 
     .knowhow_inner h2{
@@ -4057,6 +4092,21 @@ footer{
         float:right;
         width:622px;
         height: 299px;
+        position: relative;
+        background:url(../img/cjw-img-specialRecipe.jpg) no-repeat left top/cover;
+        background-size:941px 640px;
+    }
+    
+    .knowhow_inner .section_slider div>span:after{
+        content:'';
+        position: absolute;
+        right:-322px;
+        top:0;
+        width:322px;
+        height:299px;
+        background:url(../img/cjw-img-specialRecipe.jpg) no-repeat right top/cover;
+        background-size:941px 640px;
+        
     }
 
     .knowhow_inner .section_slider div a{
